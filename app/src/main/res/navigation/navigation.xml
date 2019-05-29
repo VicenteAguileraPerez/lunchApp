@@ -10,4 +10,9 @@
         android:name="com.example.lunchapp.inicio"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" />
+    <fragment
+        android:id="@+id/selecciondecomidas"
+        android:name="com.example.lunchapp.selecciondecomidas"
+        android:label="fragment_selecciondecomidas"
+        tools:layout="@layout/fragment_selecciondecomidas" />
 </navigation>
