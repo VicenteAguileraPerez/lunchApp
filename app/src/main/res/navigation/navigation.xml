@@ -9,10 +9,32 @@
         android:id="@+id/inicio"
         android:name="com.example.lunchapp.inicio"
         android:label="fragment_inicio"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_ayuda"
+            app:destination="@id/ayuda" />
+        <action
+            android:id="@+id/action_inicio_to_lugares"
+            app:destination="@id/lugares" />
+    </fragment>
+
     <fragment
-        android:id="@+id/selecciondecomidas"
-        android:name="com.example.lunchapp.selecciondecomidas"
-        android:label="fragment_selecciondecomidas"
-        tools:layout="@layout/fragment_selecciondecomidas" />
+        android:id="@+id/ayuda"
+        android:name="com.example.lunchapp.Ayuda"
+        tools:layout="@layout/fragment_ayuda"/>
+    <fragment
+        android:id="@+id/lugares"
+        android:name="com.example.lunchapp.Lugares"
+        android:label="fragment_lugares"
+        tools:layout="@layout/fragment_lugares" >
+        <action
+            android:id="@+id/action_lugares_to_lugar"
+            app:destination="@id/lugar" />
+    </fragment>
+    <fragment
+        android:id="@+id/lugar"
+        android:name="com.example.lunchapp.Lugar"
+        android:label="fragment_lugar"
+        tools:layout="@layout/fragment_lugar" />
+
 </navigation>
