@@ -24,7 +24,7 @@ public class Lugares extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lugares, container, false);
+        return inflater.inflate(R.layout.fragment_lugar_menu, container, false);
     }
 
 }
