@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">lunchApp</string>
+    <string name="app_name">LunchApp</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="descripcion_img">imagen de la tienda</string>
+    <string name="descripcion_tipo_negocio_img">imagen del tipo de tienda</string>
+    <string name="descripcion_negocio_img">imagen de la tienda</string>
 </resources>

@@ -35,20 +35,23 @@ public class AdaptadorEntidadTipoNegocio extends BaseAdapter
     public long getItemId(int position) {
         return 0;
     }
-    //donde se va a crear cada item y donde se asignas los valores de cada elemento de cada item
+    //donde se va a crear cada item_tipo_negocio y donde se asignas los valores de cada elemento de cada item_tipo_negocio
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         EntidadTipoNegocio Item = (EntidadTipoNegocio) getItem(position);
 
-        convertView = LayoutInflater.from(context).inflate(R.layout.item,null);
-        ImageView img_foto = convertView.findViewById(R.id.negocio_img);
-        TextView negocio_nombre = convertView.findViewById(R.id.negocio_nombre);
-        TextView negocio_descripcion = convertView.findViewById(R.id.negocio_descripcion);
+        convertView = LayoutInflater.from(context).inflate(R.layout.item_tipo_negocio,null);
+
+        ImageView img_foto = convertView.findViewById(R.id.tipo_negocio_img);
+        TextView negocio_nombre = convertView.findViewById(R.id.tipo_negocio_nombre);
+     //   TextView negocio_descripcion = convertView.findViewById(R.id.tipo_negocio_descripcion);
 
         //metodos de la entidad
         img_foto.setImageResource(Item.getImg_foto());
-        negocio_nombre.setText(Item.getNegocio_nombre());
-        negocio_descripcion.setText(Item.getNegocio_descripcion());
+        negocio_nombre.setText(Item.getTipo_negocio_nombre());
+     //   negocio_descripcion.setText(Item.getTipo_negocio_descripcion());
 
         return convertView;
     }

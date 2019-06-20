@@ -1,7 +1,9 @@
 package com.example.lunchapp;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,9 +13,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-import java.util.ArrayList;
 
-import static androidx.navigation.Navigation.findNavController;
+import androidx.navigation.Navigation;
+
+import java.util.ArrayList;
 
 
 /**
@@ -21,8 +24,9 @@ import static androidx.navigation.Navigation.findNavController;
  */
 public class inicio extends Fragment {
 
-    private ListView listaNegocios;
+    private ListView lvListaTipoNegocios;
     private AdaptadorEntidadTipoNegocio adaptadorEntidadTipoNegocio;
+    ArrayList<EntidadTipoNegocio> listaTipoNegocios = new ArrayList<>();
     public inicio() {
         // Required empty public constructor
     }
@@ -38,24 +42,36 @@ public class inicio extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        listaNegocios = view.findViewById(R.id.ListView_categorias_comida);
-        adaptadorEntidadTipoNegocio = new AdaptadorEntidadTipoNegocio(getNegocios(),getActivity());
-        listaNegocios.setAdapter(adaptadorEntidadTipoNegocio);
-        listaNegocios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvListaTipoNegocios = view.findViewById(R.id.ListView_categorias_comida);
+        adaptadorEntidadTipoNegocio = new AdaptadorEntidadTipoNegocio(getTiposNegocios(),getActivity());
+
+        lvListaTipoNegocios.setAdapter(adaptadorEntidadTipoNegocio);
+        lvListaTipoNegocios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                findNavController(view).navigate(R.id.action_inicio_to_lugares);
+
+              //  Bundle miSeleccion = new Bundle();
+
+                EntidadTipoNegocio entidadSeleccionada = listaTipoNegocios.get(position);
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+                SharedPreferences.Editor miEditor = sharedPreferences.edit();
+                //miSeleccion.putString("tip_seleccion",entidadSeleccionada.getTipo_negocio_nombre());
+                miEditor.putString("tipo_seleccion",entidadSeleccionada.getTipo_negocio_nombre() );
+                miEditor.apply();
+
+                Navigation.findNavController(view).navigate(R.id.action_inicio_to_lugares/*,miSeleccion*/ );
                 Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
             }
         });
     }
-    private ArrayList<EntidadTipoNegocio> getNegocios()
+    ///Aquí carga los tipos de negocios, cafeterias, pizzerias, etc, no?
+    private ArrayList<EntidadTipoNegocio> getTiposNegocios()
     {
-        ArrayList<EntidadTipoNegocio> listaNegocios = new ArrayList<>();
-        listaNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Negocio 1","Fonda Doña Cuca"));
-        listaNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Negocio 2","Fonda Doña Cuca 2"));
-        listaNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Negocio 3 ","Fonda Doña Cuca 3"));
-        return  listaNegocios;
+        listaTipoNegocios = new ArrayList<>();
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Tipo Negocio 1","Pizzas"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Tipo Negocio 2","Cafés"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Tipo Negocio 3 ","Tacos "));
+        return  listaTipoNegocios;
     }
 
 }
