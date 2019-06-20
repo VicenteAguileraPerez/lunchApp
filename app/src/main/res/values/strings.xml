@@ -5,4 +5,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="descripcion_tipo_negocio_img">imagen del tipo de tienda</string>
     <string name="descripcion_negocio_img">imagen de la tienda</string>
+    <string name="descripcion_logo_nombre_lunchapp">Aquí se coloca la imagen del logo o nombre de la App</string>
 </resources>

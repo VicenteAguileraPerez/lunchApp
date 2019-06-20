@@ -10,17 +10,12 @@ public class MainActivity extends AppCompatActivity {
     //Commit prueba Victor
     //Commit prueba ZAM1219
 
-    Toolbar toolbar;
-    Fragment fragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        setSupportActionBar(toolbar);
-        this.fragment = new inicio();
-        
+
     }
 }
