@@ -4,32 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Ayuda" >
+    tools:context=".Ayuda">
+
 
     <TextView
         android:id="@+id/textView6_tituloayudaycomentarios"
         android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:text="AYUDA Y COMENTARIOS"
-        android:textColorLink="#F44336" />
+        android:layout_height="wrap_content"
+        android:text="@string/soporte_y_contacto" />
 
     <EditText
         android:id="@+id/editText_correodecontacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="15"
-        android:inputType="textEmailAddress" />
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editText_comentariodeenvio"
         android:layout_width="match_parent"
-        android:layout_height="319dp"
-        android:ems="15"
+        android:layout_height="347dp"
+        android:ems="10"
         android:inputType="textPersonName"
-        android:text="Coloca en este espacio tu comentario" />
+        android:text="Escribe tu comentario" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_enviarcomentario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENVIAR" />
