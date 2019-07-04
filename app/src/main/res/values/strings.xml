@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LunchApp</string>
 
@@ -8,4 +9,12 @@
     <string name="descripcion_logo_nombre_lunchapp">Aquí se coloca la imagen del logo o nombre de la App</string>
     <string name="soporteyayuda">SOPORTEYAYUDA</string>
     <string name="soporte_y_contacto">SOPORTE Y CONTACTO</string>
+    <string name="email_app">LUNCHAPPWO@GMAIL.COM</string>
+    <string name="abrir_navigation_menu">Abrir menú deslizante</string>
+    <string name="cerrar_navigation_menu">Cerrar menú deslizante</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="compartir"> Compartir</string>
+    <string name="comunicate">Comunicate</string>
+
+    <string name="descripcion_icono">Aquí se coloca el icono de la app.</string>
 </resources>

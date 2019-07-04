@@ -1,0 +1,10 @@
+ <shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+     <!-- el shape que servirá de background al header del NavigationMenu -->
+    <gradient
+        android:angle="135"
+        android:endColor="#FF7143"
+        android:centerColor="#FF865B"
+        android:startColor="#FFB09D"
+        android:type="linear" />
+</shape>
