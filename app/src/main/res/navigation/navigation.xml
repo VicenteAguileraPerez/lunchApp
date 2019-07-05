@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/inicio">
+    app:startDestination="@id/presentacion_fragment">
 
     <fragment
         android:id="@+id/inicio"
@@ -41,4 +41,13 @@
         android:id="@+id/ayuda"
         android:name="com.example.lunchapp.Ayuda"
         tools:layout="@layout/fragment_ayuda"/>
+    <fragment
+        android:id="@+id/presentacion_fragment"
+        android:name="com.example.lunchapp.presentacion_fragment"
+        android:label="fragment_presentacion_fragment"
+        tools:layout="@layout/fragment_presentacion_fragment" >
+        <action
+            android:id="@+id/action_presentacion_fragment_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
 </navigation>
