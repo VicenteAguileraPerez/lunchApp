@@ -3,6 +3,7 @@ package com.example.lunchapp;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,4 +28,14 @@ public class Ayuda extends Fragment {
         return inflater.inflate(R.layout.fragment_ayuda, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        // se niega el retroceso de fragment
+        if(getActivity() instanceof MainActivity)
+        {
+            ((MainActivity)getActivity()).activado(false);
+        }
+        //
+    }
 }

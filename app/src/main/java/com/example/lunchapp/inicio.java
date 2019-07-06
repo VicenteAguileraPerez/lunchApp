@@ -42,6 +42,13 @@ public class inicio extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        // se niega el retroceso de fragment
+        if(getActivity() instanceof MainActivity)
+        {
+            ((MainActivity)getActivity()).activado(true);
+        }
+        //
+
         lvListaTipoNegocios = view.findViewById(R.id.ListView_categorias_comida);
         adaptadorEntidadTipoNegocio = new AdaptadorEntidadTipoNegocio(getTiposNegocios(),getActivity());
 

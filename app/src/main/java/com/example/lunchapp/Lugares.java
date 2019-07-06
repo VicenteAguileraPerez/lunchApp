@@ -46,7 +46,12 @@ public class Lugares extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        // se niega el retroceso de fragment
+        if(getActivity() instanceof MainActivity)
+        {
+            ((MainActivity)getActivity()).activado(false);
+        }
+        //
         lblName = view.findViewById(R.id.lblTipoComida);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         lblName.setText(sharedPreferences.getString("tipo_seleccion", "Error"));

@@ -12,8 +12,9 @@ import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
-    //Commit prueba Victor
-    //Commit prueba ZAM1219
+
+    private boolean activar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,27 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
 
 
+    }
+    // metodo que prohibe que se regrese a la pantalla anterior
+    public void activado(boolean activar)
+    {
+        this.activar=activar;
+    }
 
+    @Override
+    public void onBackPressed()
+    {
+
+        //utilizado para definir cuando si puedo regresar y cuando no
+
+
+        if ( activar )//se asigna 1 en el fragment principal chofer y usuario
+        {//the fragment on which you want to handle your back press
+            finish();
+        }
+        else{// si es diferente a inicio, principal usuario o principa chofer
+            super.onBackPressed();
+
+        }
     }
 }
