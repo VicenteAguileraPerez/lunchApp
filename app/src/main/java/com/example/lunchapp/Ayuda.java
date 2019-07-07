@@ -34,7 +34,8 @@ public class Ayuda extends Fragment {
         // se niega el retroceso de fragment
         if(getActivity() instanceof MainActivity)
         {
-            ((MainActivity)getActivity()).activado(false);
+            ((MainActivity)getActivity()).activadoRetonrno(false);
+            ((MainActivity)getActivity()).activadoToolBar(false);
         }
         //
     }

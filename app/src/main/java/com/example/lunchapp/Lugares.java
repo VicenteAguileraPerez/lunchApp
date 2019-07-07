@@ -49,20 +49,22 @@ public class Lugares extends Fragment {
         // se niega el retroceso de fragment
         if(getActivity() instanceof MainActivity)
         {
-            ((MainActivity)getActivity()).activado(false);
+            ((MainActivity)getActivity()).activadoRetonrno(false);
+            ((MainActivity)getActivity()).activadoToolBar(false);
         }
         //
         lblName = view.findViewById(R.id.lblTipoComida);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         lblName.setText(sharedPreferences.getString("tipo_seleccion", "Error"));
 
-       lvListaNesgocios = view.findViewById(R.id.ListView_Lugares);
+        lvListaNesgocios = view.findViewById(R.id.ListView_Lugares);
         adaptadorEntidadNegocio = new AdaptadorEntidadNegocio(getNegocios(), getActivity());
         lvListaNesgocios.setAdapter(adaptadorEntidadNegocio);
 
         lvListaNesgocios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
 
                 Navigation.findNavController(view).navigate(R.id.action_lugares_to_lugar );

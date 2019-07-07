@@ -45,7 +45,8 @@ public class inicio extends Fragment {
         // se niega el retroceso de fragment
         if(getActivity() instanceof MainActivity)
         {
-            ((MainActivity)getActivity()).activado(true);
+            ((MainActivity)getActivity()).activadoRetonrno(true);
+            ((MainActivity)getActivity()).activadoToolBar(false);
         }
         //
 
@@ -57,7 +58,7 @@ public class inicio extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-              //  Bundle miSeleccion = new Bundle();
+                //Bundle miSeleccion = new Bundle();
 
                 EntidadTipoNegocio entidadSeleccionada = listaTipoNegocios.get(position);
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
@@ -66,7 +67,7 @@ public class inicio extends Fragment {
                 miEditor.putString("tipo_seleccion",entidadSeleccionada.getTipo_negocio_nombre() );
                 miEditor.apply();
 
-                Navigation.findNavController(view).navigate(R.id.action_inicio_to_lugares/*,miSeleccion*/ );
+                Navigation.findNavController(view).navigate(R.id.action_inicio_to_lugares);
                 Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
             }
         });

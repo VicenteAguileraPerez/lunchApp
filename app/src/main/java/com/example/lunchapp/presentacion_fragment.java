@@ -37,6 +37,10 @@ public class presentacion_fragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        if(getActivity() instanceof  MainActivity)
+        {
+            ((MainActivity)getActivity()).activadoToolBar(true);
+        }
         super.onViewCreated(view, savedInstanceState);
 
         new Handler().postDelayed(new Runnable() {

@@ -7,39 +7,13 @@
     tools:context=".Lugar">
 
 
-    <EditText
-        android:id="@+id/editText3Borrar"
-        android:layout_width="530dp"
-        android:layout_height="164dp"
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="76dp"
-        android:text="Fragment Lugares clasificacion (lugar navigation)"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/editBorrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="152dp"
+        android:layout_height="133dp"
+        android:contentDescription="@string/descripcion_icono"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editBorrar"
-        android:layout_width="530dp"
-        android:layout_height="164dp"
-
-        android:layout_marginStart="16dp"
-
-        android:layout_marginTop="12dp"
-        android:text="en este fragment irá la info detallada de cada lugar"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3Borrar" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/restaurante2" />
 
 </android.support.constraint.ConstraintLayout>

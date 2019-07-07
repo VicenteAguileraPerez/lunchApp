@@ -32,7 +32,11 @@
         android:id="@+id/lugar"
         android:name="com.example.lunchapp.Lugar"
         android:label="fragment_lugar"
-        tools:layout="@layout/fragment_negocio_especifico" />
+        tools:layout="@layout/fragment_negocio_especifico" >
+        <action
+            android:id="@+id/action_lugar_to_quejasysugenencias"
+            app:destination="@id/quejasysugenencias" />
+    </fragment>
 
 
 
@@ -50,4 +54,9 @@
             android:id="@+id/action_presentacion_fragment_to_inicio"
             app:destination="@id/inicio" />
     </fragment>
+    <fragment
+        android:id="@+id/quejasysugenencias"
+        android:name="com.example.lunchapp.quejasysugenencias"
+        android:label="fragment_quejasysugenencias"
+        tools:layout="@layout/fragment_quejasysugenencias" />
 </navigation>

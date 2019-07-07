@@ -12,8 +12,8 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean activar;
-
+    private boolean activarRetorno;
+    private boolean activarToolBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         //se referencia la toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         //se crea el "botón" para abrir y cerrar el navigation menu
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -34,9 +34,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
     // metodo que prohibe que se regrese a la pantalla anterior
-    public void activado(boolean activar)
+    public void activadoRetonrno(boolean activarRetorno)
     {
-        this.activar=activar;
+        this.activarRetorno=activarRetorno;
+    }
+    public void activadoToolBar(boolean  activarToolBar)
+    {
+        if (activarToolBar)
+        {
+             Objects.requireNonNull(getSupportActionBar()).hide();
+        }
+        else
+        {
+            Objects.requireNonNull(getSupportActionBar()).show();
+        }
+
     }
 
     @Override
@@ -46,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         //utilizado para definir cuando si puedo regresar y cuando no
 
 
-        if ( activar )//se asigna 1 en el fragment principal chofer y usuario
+        if (activarRetorno)//se asigna 1 en el fragment principal chofer y usuario
         {//the fragment on which you want to handle your back press
             finish();
         }

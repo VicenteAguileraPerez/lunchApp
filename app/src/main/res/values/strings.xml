@@ -17,4 +17,5 @@
     <string name="comunicate">Comunicate</string>
 
     <string name="descripcion_icono">Aquí se coloca el icono de la app.</string>
+    <string name="holamundo">Holamundo</string>
 </resources>
