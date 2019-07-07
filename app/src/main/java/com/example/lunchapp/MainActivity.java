@@ -13,7 +13,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private boolean activarRetorno;
-    private boolean activarToolBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
