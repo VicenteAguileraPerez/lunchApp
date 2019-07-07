@@ -10,11 +10,17 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@android:drawable/ic_menu_share"
-                android:title="@string/compartir" />
+                android:title="@string/compartir"
+
+                />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_help"
                 android:icon="@android:drawable/ic_menu_help"
                 android:title="@string/ayuda" />
+            <item
+                android:id="@+id/nav_quejas"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="@string/quejassugerencias" />
         </menu>
     </item>
 

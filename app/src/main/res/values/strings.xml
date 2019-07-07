@@ -7,15 +7,15 @@
     <string name="descripcion_tipo_negocio_img">imagen del tipo de tienda</string>
     <string name="descripcion_negocio_img">imagen de la tienda</string>
     <string name="descripcion_logo_nombre_lunchapp">Aquí se coloca la imagen del logo o nombre de la App</string>
-    <string name="soporteyayuda">SOPORTEYAYUDA</string>
-    <string name="soporte_y_contacto">SOPORTE Y CONTACTO</string>
+    <string name="soporteyayuda">soporte ayuda</string>
+    <string name="soporte_y_contacto">Soporte y Contacto</string>
     <string name="email_app">LUNCHAPPWO@GMAIL.COM</string>
     <string name="abrir_navigation_menu">Abrir menú deslizante</string>
     <string name="cerrar_navigation_menu">Cerrar menú deslizante</string>
     <string name="ayuda">Ayuda</string>
     <string name="compartir"> Compartir</string>
-    <string name="comunicate">Comunicate</string>
-
+    <string name="comunicate">Comunícate</string>
+    <string name="quejassugerencias">Quejas y Sugerencias</string>
     <string name="descripcion_icono">Aquí se coloca el icono de la app.</string>
-    <string name="holamundo">Holamundo</string>
+
 </resources>
