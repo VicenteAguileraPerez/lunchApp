@@ -20,15 +20,15 @@ public class EntidadTipoNegocio
         return tipo_negocio_nombre;
     }
 
-    public void setTipo_negocio_nombre(String tipo_negocio_nombre) {
+    /*public void setTipo_negocio_nombre(String tipo_negocio_nombre) {
         this.tipo_negocio_nombre = tipo_negocio_nombre;
-    }
+    }*/
 
     public String getTipo_negocio_descripcion() {
         return tipo_negocio_descripcion;
     }
 
-    public void setTipo_negocio_descripcion(String tipo_negocio_descripcion) {
+    /*public void setTipo_negocio_descripcion(String tipo_negocio_descripcion) {
         this.tipo_negocio_descripcion = tipo_negocio_descripcion;
-    }
+    }*/
 }

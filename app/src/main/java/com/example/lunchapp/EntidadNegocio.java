@@ -20,15 +20,15 @@ public class EntidadNegocio {
         return img_foto;
     }
 
-    public void setImg_foto(int img_foto) {
+    /*public void setImg_foto(int img_foto) {
         this.img_foto = img_foto;
-    }
+    }*/
 
     public String getNegocio_nombre() {
         return negocio_nombre;
     }
 
-    public void setNegocio_nombre(String negocio_nombre) {
+    /*public void setNegocio_nombre(String negocio_nombre) {
         this.negocio_nombre = negocio_nombre;
-    }
+    }*/
 }
