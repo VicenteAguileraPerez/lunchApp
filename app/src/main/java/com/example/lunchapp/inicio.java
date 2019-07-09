@@ -4,29 +4,28 @@ package com.example.lunchapp;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import androidx.navigation.Navigation;
-
 import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class inicio extends Fragment {
+public class inicio extends Fragment implements View.OnTouchListener {
 
     private ListView lvListaTipoNegocios;
     private AdaptadorEntidadTipoNegocio adaptadorEntidadTipoNegocio;
     ArrayList<EntidadTipoNegocio> listaTipoNegocios = new ArrayList<>();
+    private float x1,x2;
+
     public inicio() {
         // Required empty public constructor
     }
@@ -36,12 +35,8 @@ public class inicio extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_categorias_comida, container, false);
-    }
+        final View view = inflater.inflate(R.layout.fragment_categorias_comida, container, false);
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
         // se niega el retroceso de fragment
         if(getActivity() instanceof MainActivity)
         {
@@ -54,11 +49,13 @@ public class inicio extends Fragment {
         adaptadorEntidadTipoNegocio = new AdaptadorEntidadTipoNegocio(getTiposNegocios(),getActivity());
 
         lvListaTipoNegocios.setAdapter(adaptadorEntidadTipoNegocio);
+
         lvListaTipoNegocios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //Bundle miSeleccion = new Bundle();
+
+
 
                 EntidadTipoNegocio entidadSeleccionada = listaTipoNegocios.get(position);
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
@@ -68,10 +65,21 @@ public class inicio extends Fragment {
                 miEditor.apply();
 
                 Navigation.findNavController(view).navigate(R.id.action_inicio_to_lugares);
+
+                /*Lugares lugares = new Lugares();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_to_right,R.anim.exit_to_right,R.anim.enter_to_right,R.anim.exit_to_right);
+                transaction.addToBackStack(null);
+                transaction.add(R.id.fragment,lugares).commit();*/
                 Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
             }
         });
+        return view;
     }
+
+
+
     ///Aquí carga los tipos de negocios, cafeterias, pizzerias, etc, no?
     private ArrayList<EntidadTipoNegocio> getTiposNegocios()
     {
@@ -82,4 +90,91 @@ public class inicio extends Fragment {
         return  listaTipoNegocios;
     }
 
+    @Override
+    public boolean onTouch(View view, MotionEvent event) {
+        // TODO Auto-generated method stub
+        switch(event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                x1 = event.getX();
+                //Toast.makeText(getActivity(),"abajo",Toast.LENGTH_SHORT).show();
+                break;
+            case MotionEvent.ACTION_UP:
+                x2 = event.getX();
+                //Toast.makeText(getActivity(),"arriba",Toast.LENGTH_SHORT).show();
+                if(x1 > x2){//sacar pantalla de la derecha
+
+                    Navigation.findNavController(view).navigate(R.id.action_inicio_to_ayuda);
+
+                }
+                else if(x1 < x2){// pantalla de la izquierda
+
+
+                }
+                break;
+            default:
+                Toast.makeText(getActivity(),"abajo",Toast.LENGTH_SHORT).show();
+        }
+        return true;
+    }
+
+
+    /*public boolean onTouchEvent(MotionEvent event)
+    {
+        switch(event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                x1 = event.getX();
+                Toast.makeText(getActivity(),"abajo",Toast.LENGTH_SHORT).show();
+                break;
+            case MotionEvent.ACTION_UP:
+                x2 = event.getX();
+                Toast.makeText(getActivity(),"arriba",Toast.LENGTH_SHORT).show();
+                if(x1 > x2){
+                    Intent i = new Intent(MainActivity.this, left.class);
+                    startActivity(i);
+                }
+                else if(x1 < x2){
+
+                    Intent i = new Intent(MainActivity.this, right.class);
+                    startActivity(i);
+                }
+                break;
+        }
+        return true;
+    }*/
+
+
+
+    /*@Override
+    public boolean onTouch(View view, MotionEvent touchEvent) {
+
+            switch(touchEvent.getAction()){
+                case MotionEvent.ACTION_DOWN:
+                    x1 = touchEvent.getX();
+                    y1 = touchEvent.getY();
+                    System.out.println("\n\nx1="+x1+"  y1="+y1+"\n\n");
+                    break;
+                case MotionEvent.ACTION_UP:
+                    x2 = touchEvent.getX();
+                    y2 = touchEvent.getY();
+                    if(x1 < x2){
+
+                        //Intent i = new Intent(MainActivity.this, SwipeLeft.class);
+                        //startActivity(i);
+                        Navigation.findNavController(view).navigate(R.id.action_inicio_to_ayuda);
+                    }
+                    else if(x1 > x2){
+
+                        //Intent i = new Intent(MainActivity.this, SwipeRight.class);
+                        //startActivity(i);
+                    }
+                    System.out.println("\n\nx2="+x2+"  y2="+y2+"\n\n");
+                    break;
+            }
+
+        return false;
+    }*/
+
+
 }
+
+

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Lugares">
+    tools:context=".Lugares"
+    android:background="@android:color/white">
 
     <!-- TODO: Update blank fragment layout, contendrá todos los elementos de cafeterias todos los de pizza, segun la seleccion de categoria. etc-->
 

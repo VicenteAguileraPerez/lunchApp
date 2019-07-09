@@ -3,13 +3,18 @@ package com.example.lunchapp;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.GestureDetector;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.navigation.Navigation;
@@ -17,16 +22,18 @@ import androidx.navigation.Navigation;
 import java.util.Objects;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity
+        //implements /*NavigationView.OnNavigationItemSelectedListener*/ View.OnTouchListener
+{
 
     private boolean activarRetorno;
+    private float x1,x2,y1,y2;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //se referencia la toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -34,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        //navigationView.setNavigationItemSelectedListener(this);
 
         //se crea el "botón" para abrir y cerrar el navigation menu
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -63,21 +70,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId())
-        {
-            case R.id.nav_help:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new Ayuda()).commit();
-                Toast.makeText(this,"Ayuda",Toast.LENGTH_LONG).show();
-                  break;
-            case R.id.nav_quejas:
-                Toast.makeText(this,"Quejas",Toast.LENGTH_LONG).show();
-                break;
-        }
-        return true;
-    }
-
-    @Override
     public void onBackPressed()
     {
 
@@ -93,5 +85,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
     }
+
+
+
+
+
 
 }

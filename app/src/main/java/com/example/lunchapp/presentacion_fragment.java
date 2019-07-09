@@ -7,6 +7,8 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +50,12 @@ public class presentacion_fragment extends Fragment {
             public void run()
             {
                 Navigation.findNavController(getView()).navigate(action_presentacion_fragment_to_inicio);
+                /*inicio ini = new inicio();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_to_right,R.anim.exit_to_right,R.anim.enter_to_right,R.anim.exit_to_right);
+                transaction.addToBackStack(null);
+                transaction.add(R.id.fragment,ini).commit();*/
 
             }
         },1000);
