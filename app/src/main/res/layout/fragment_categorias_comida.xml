@@ -15,23 +15,38 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:divider="@color/colorThird"
+        android:dividerHeight="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_buscar_tipo_negocio" />
+
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_text_buscar_tipo_negocio"
         android:layout_width="match_parent"
         android:layout_height="63dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="8dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
         android:ems="10"
+        android:hint="@string/buscar_tipo_negocio"
         android:inputType="textPersonName"
-        android:text="Fragment Categorias Comida"
+        android:drawableEnd="@drawable/ic_buscar_icon"
+        android:textCursorDrawable="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="20dp" />
+        tools:targetApi="o" />
+
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>

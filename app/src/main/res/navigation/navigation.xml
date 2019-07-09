@@ -13,9 +13,6 @@
         <action
         android:id="@+id/action_inicio_to_lugares"
         app:destination="@id/lugares" />
-        <action
-            android:id="@+id/action_inicio_to_ayuda"
-            app:destination="@id/ayuda" />
     </fragment>
 
     <fragment
@@ -32,11 +29,7 @@
         android:id="@+id/lugar"
         android:name="com.example.lunchapp.Lugar"
         android:label="fragment_lugar"
-        tools:layout="@layout/fragment_negocio_especifico" >
-        <action
-            android:id="@+id/action_lugar_to_quejasysugenencias"
-            app:destination="@id/quejasysugenencias" />
-    </fragment>
+        tools:layout="@layout/fragment_negocio_especifico" />
 
 
 

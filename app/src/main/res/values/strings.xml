@@ -17,5 +17,10 @@
     <string name="comunicate">Comunícate</string>
     <string name="quejassugerencias">Quejas y Sugerencias</string>
     <string name="descripcion_icono">Aquí se coloca el icono de la app.</string>
+    <string name="enviar_mensaje">Enviar</string>
+    <string name="email_usuario">Correo electrónico</string>
+    <string name="escribe_tu_queja_sugerencia">Escribe tu queja o sugerencia</string>
+    <string name="buscar_tipo_negocio">Buscar negocios</string>
+    <string name="buscar_negocio">Buscar</string>
 
 </resources>

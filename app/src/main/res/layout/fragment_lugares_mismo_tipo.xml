@@ -7,44 +7,41 @@
     tools:context=".Lugares"
     android:background="@android:color/white">
 
-    <!-- TODO: Update blank fragment layout, contendrá todos los elementos de cafeterias todos los de pizza, segun la seleccion de categoria. etc-->
+    <!--
+    TODO: Update blank fragment layout, contendrá todos los elementos de cafeterias todos los de pizza, segun la seleccion de categoria. etc-->
 
-    <EditText
-        android:id="@+id/editText2"
+    <ListView
+        android:id="@+id/ListView_Lugares"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Fragment Lugar menu"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <EditText
-        android:id="@+id/lblTipoComida"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:divider="@color/colorThird"
+        android:dividerHeight="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_buscar_lugar_mismo_tipo" />
 
-    <LinearLayout
+
+    <EditText
+        android:id="@+id/edit_text_buscar_lugar_mismo_tipo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/lblTipoComida">
-
-        <ListView
-            android:id="@+id/ListView_Lugares"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
-
+        android:layout_height="63dp"
+        android:layout_margin="8dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:hint="@string/buscar_tipo_negocio"
+        android:inputType="textPersonName"
+        android:drawableEnd="@drawable/ic_buscar_icon"
+        android:textCursorDrawable="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
 
 </android.support.constraint.ConstraintLayout>

@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity
 {
 
     private boolean activarRetorno;
-    private float x1,x2,y1,y2;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Hola mundo");
         //se referencia la toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -86,9 +86,8 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
-
-
-
-
+    @Override
+    public void setTitle(CharSequence title) {
+        super.setTitle(title);
+    }
 }

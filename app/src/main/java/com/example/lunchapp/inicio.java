@@ -19,12 +19,12 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class inicio extends Fragment implements View.OnTouchListener {
+public class inicio extends Fragment{
 
     private ListView lvListaTipoNegocios;
     private AdaptadorEntidadTipoNegocio adaptadorEntidadTipoNegocio;
     ArrayList<EntidadTipoNegocio> listaTipoNegocios = new ArrayList<>();
-    private float x1,x2;
+
 
     public inicio() {
         // Required empty public constructor
@@ -41,6 +41,7 @@ public class inicio extends Fragment implements View.OnTouchListener {
         if(getActivity() instanceof MainActivity)
         {
             ((MainActivity)getActivity()).activadoRetonrno(true);
+            ((MainActivity)getActivity()).setTitle("Negocios Uruapan");
             ((MainActivity)getActivity()).activadoToolBar(false);
         }
         //
@@ -90,32 +91,7 @@ public class inicio extends Fragment implements View.OnTouchListener {
         return  listaTipoNegocios;
     }
 
-    @Override
-    public boolean onTouch(View view, MotionEvent event) {
-        // TODO Auto-generated method stub
-        switch(event.getAction()){
-            case MotionEvent.ACTION_DOWN:
-                x1 = event.getX();
-                //Toast.makeText(getActivity(),"abajo",Toast.LENGTH_SHORT).show();
-                break;
-            case MotionEvent.ACTION_UP:
-                x2 = event.getX();
-                //Toast.makeText(getActivity(),"arriba",Toast.LENGTH_SHORT).show();
-                if(x1 > x2){//sacar pantalla de la derecha
 
-                    Navigation.findNavController(view).navigate(R.id.action_inicio_to_ayuda);
-
-                }
-                else if(x1 < x2){// pantalla de la izquierda
-
-
-                }
-                break;
-            default:
-                Toast.makeText(getActivity(),"abajo",Toast.LENGTH_SHORT).show();
-        }
-        return true;
-    }
 
 
     /*public boolean onTouchEvent(MotionEvent event)

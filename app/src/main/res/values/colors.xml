@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#ff6634 </color>
-    <color name="colorPrimaryDark">#ff6634</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#FF6634</color>
+    <color name="colorSecundary">#FF865B</color>
+    <color name="colorThird">#FFB09D</color>
+    <color name="colorPrimaryDark">#FF6634</color>
+    <color name="colorAccent">#FF6634</color>
     <color name="colorToolBar">#ff512f</color>
+    <color name="colorblanco">#FFFFFF</color>
 
 </resources>

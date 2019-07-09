@@ -27,7 +27,6 @@ public class Lugares extends Fragment {
 
     EditText lblName;
 
-
     ListView lvListaNesgocios;
     private ArrayList<EntidadNegocio> listaNegocios = new ArrayList<>();
     private AdaptadorEntidadNegocio adaptadorEntidadNegocio;
@@ -49,13 +48,15 @@ public class Lugares extends Fragment {
         // se niega el retroceso de fragment
         if(getActivity() instanceof MainActivity)
         {
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String titulo = sharedPreferences.getString("tipo_seleccion", "Error");
             ((MainActivity)getActivity()).activadoRetonrno(false);
+            ((MainActivity)getActivity()).setTitle(titulo);
             ((MainActivity)getActivity()).activadoToolBar(false);
         }
         //
-        lblName = view.findViewById(R.id.lblTipoComida);
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        lblName.setText(sharedPreferences.getString("tipo_seleccion", "Error"));
+        lblName = view.findViewById(R.id.edit_text_buscar_lugar_mismo_tipo);
+
 
         lvListaNesgocios = view.findViewById(R.id.ListView_Lugares);
         adaptadorEntidadNegocio = new AdaptadorEntidadNegocio(getNegocios(), getActivity());
