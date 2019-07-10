@@ -92,10 +92,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // Handle the camera action
 
         }
-        /*else if (id == R.id.nav_help) {
+        else if (id == R.id.nav_help) {
             Intent intent = new Intent(this, Main2Activity_Ayuda.class);
             startActivity(intent);
-        }*/
+        }
         else if (id == R.id.nav_quejas) {
 
         }
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public void clic (MenuItem item)
+    /*public void clic (MenuItem item)
     {
         int id = item.getItemId();
 
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if (id == R.id.nav_quejas) {
 
         }
-    }
+    }*/
 
 
 }
