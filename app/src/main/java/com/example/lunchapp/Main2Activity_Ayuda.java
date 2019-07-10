@@ -15,9 +15,10 @@ public class Main2Activity_Ayuda extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2__ayuda);
         //llamada al método para que se active la flecha en el Actionbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        setupActionBar();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Ayuda");
+
+        //setupActionBar();
     }
 
 
