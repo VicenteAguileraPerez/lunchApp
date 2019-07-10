@@ -32,12 +32,6 @@
         tools:layout="@layout/fragment_negocio_especifico" />
 
 
-
-
-    <fragment
-        android:id="@+id/ayuda"
-        android:name="com.example.lunchapp.Ayuda"
-        tools:layout="@layout/fragment_ayuda"/>
     <fragment
         android:id="@+id/presentacion_fragment"
         android:name="com.example.lunchapp.presentacion_fragment"

@@ -1,18 +1,23 @@
 package com.example.lunchapp;
 
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
 
     private boolean activarRetorno;
@@ -29,7 +34,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
-        //navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
 
         //se crea el "botón" para abrir y cerrar el navigation menu
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -77,5 +82,32 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
 
+        if (id == R.id.nav_share) {
+            // Handle the camera action
+
+        }
+        else if (id == R.id.nav_help) {
+            Intent intent = new Intent(this, Main2Activity_Ayuda.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_quejas) {
+
+        }
+        /*else if (id == R.id.nav_tools) {
+
+        }
+        else if (id == R.id.nav_share) {
+
+        }
+        else if (id == R.id.nav_send) {
+
+        }*/
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }

@@ -33,10 +33,10 @@ public class Ayuda extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // se niega el retroceso de fragment
-        if(getActivity() instanceof MainActivity)
+        if(getActivity() instanceof Main2Activity_Ayuda)
         {
-            ((MainActivity)getActivity()).activadoRetonrno(false);
-            ((MainActivity)getActivity()).activadoToolBar(false);
+            //((MainActivity)getActivity()).activadoRetonrno(false);
+            //((Main2Activity_Ayuda)getActivity()).activadoToolBar(false);
         }
         //
     }

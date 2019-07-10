@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,31 +11,14 @@
 
 
     <TextView
-        android:id="@+id/textView6_tituloayudaycomentarios"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/soporte_y_contacto" />
-
-    <EditText
-        android:id="@+id/editText_correodecontacto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/editText_comentariodeenvio"
-        android:layout_width="match_parent"
-        android:layout_height="347dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Escribe tu comentario" />
-
-    <Button
-        android:id="@+id/button_enviarcomentario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ENVIAR" />
-
-</LinearLayout>
+        android:layout_marginTop="248dp"
+        android:layout_marginBottom="464dp"
+        android:text="@string/escribe_tu_queja_sugerencia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
