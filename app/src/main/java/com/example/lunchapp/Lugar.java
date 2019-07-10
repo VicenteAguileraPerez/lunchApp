@@ -1,7 +1,9 @@
 package com.example.lunchapp;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -34,6 +36,9 @@ public class Lugar extends Fragment {
         // se niega el retroceso de fragment
         if(getActivity() instanceof MainActivity)
         {
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String titulo = sharedPreferences.getString("tipo_selecciones", "Error");
+            getActivity().setTitle(titulo);
             ((MainActivity)getActivity()).activadoRetonrno(false);
             ((MainActivity)getActivity()).activadoToolBar(false);
         }

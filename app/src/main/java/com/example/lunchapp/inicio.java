@@ -61,7 +61,6 @@ public class inicio extends Fragment{
                 EntidadTipoNegocio entidadSeleccionada = listaTipoNegocios.get(position);
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
                 SharedPreferences.Editor miEditor = sharedPreferences.edit();
-                //miSeleccion.putString("tip_seleccion",entidadSeleccionada.getTipo_negocio_nombre());
                 miEditor.putString("tipo_seleccion",entidadSeleccionada.getTipo_negocio_nombre() );
                 miEditor.apply();
 
@@ -73,7 +72,7 @@ public class inicio extends Fragment{
                 transaction.setCustomAnimations(R.anim.enter_to_right,R.anim.exit_to_right,R.anim.enter_to_right,R.anim.exit_to_right);
                 transaction.addToBackStack(null);
                 transaction.add(R.id.fragment,lugares).commit();*/
-                Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
             }
         });
         return view;

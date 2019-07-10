@@ -25,11 +25,11 @@ import java.util.ArrayList;
  */
 public class Lugares extends Fragment {
 
-    EditText lblName;
 
-    ListView lvListaNesgocios;
-    private ArrayList<EntidadNegocio> listaNegocios = new ArrayList<>();
+
+    private ListView lvListaTipoNegocios;
     private AdaptadorEntidadNegocio adaptadorEntidadNegocio;
+    ArrayList<EntidadNegocio> listaNegocios = new ArrayList<>();
     public Lugares() {
         // Required empty public constructor
 
@@ -51,23 +51,27 @@ public class Lugares extends Fragment {
             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
             String titulo = sharedPreferences.getString("tipo_seleccion", "Error");
             ((MainActivity)getActivity()).activadoRetonrno(false);
-            ((MainActivity)getActivity()).setTitle(titulo);
+            getActivity().setTitle(titulo);
             ((MainActivity)getActivity()).activadoToolBar(false);
         }
         //
-        lblName = view.findViewById(R.id.edit_text_buscar_lugar_mismo_tipo);
 
 
-        lvListaNesgocios = view.findViewById(R.id.ListView_Lugares);
+
+        lvListaTipoNegocios = view.findViewById(R.id.ListView_Lugares);
         adaptadorEntidadNegocio = new AdaptadorEntidadNegocio(getNegocios(), getActivity());
-        lvListaNesgocios.setAdapter(adaptadorEntidadNegocio);
+        lvListaTipoNegocios.setAdapter(adaptadorEntidadNegocio);
 
-        lvListaNesgocios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvListaTipoNegocios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
+                EntidadNegocio entidadSeleccionada = listaNegocios.get(position);
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+                SharedPreferences.Editor miEditor = sharedPreferences.edit();
+                miEditor.putString("tipo_selecciones",entidadSeleccionada.getNegocio_nombre() );
+                miEditor.apply();
                 Navigation.findNavController(view).navigate(R.id.action_lugares_to_lugar );
 
             }

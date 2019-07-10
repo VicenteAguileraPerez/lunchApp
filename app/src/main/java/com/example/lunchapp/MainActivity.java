@@ -1,33 +1,21 @@
 package com.example.lunchapp;
 
 
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.GestureDetector;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Toast;
 
-import androidx.navigation.Navigation;
-
+import java.util.ArrayList;
 import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity
-        //implements /*NavigationView.OnNavigationItemSelectedListener*/ View.OnTouchListener
 {
 
     private boolean activarRetorno;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,13 +69,13 @@ public class MainActivity extends AppCompatActivity
             finish();
         }
         else{// si es diferente a inicio, principal usuario o principa chofer
+
+
             super.onBackPressed();
 
         }
     }
 
-    @Override
-    public void setTitle(CharSequence title) {
-        super.setTitle(title);
-    }
+
+
 }
