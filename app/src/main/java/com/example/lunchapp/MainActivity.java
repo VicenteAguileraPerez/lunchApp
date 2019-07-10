@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import java.util.Objects;
@@ -87,22 +88,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_share) {
             // Handle the camera action
+            item.setCheckable(true);
 
         }
         else if (id == R.id.nav_help) {
-            Intent intent = new Intent(this, Main2Activity_Ayuda.class);
-            startActivity(intent);
+
+            item.setCheckable(true);
             if(item.isCheckable())
             {
-                //this.items = item;
-                //Toast.makeText(this,"checados",Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(this,"checados",Toast.LENGTH_SHORT).show();
+                //item.setCheckable(false);
 
             }
+            Intent intent = new Intent(this, Main2Activity_Ayuda.class);
+            startActivity(intent);
+
 
         }
         else if (id == R.id.nav_quejas) {
-
+            item.setCheckable(true);
         }
+
         /*else if (id == R.id.nav_tools) {
 
         }
