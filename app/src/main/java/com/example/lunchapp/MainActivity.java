@@ -123,14 +123,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (id == R.id.nav_help) {
 
-
-
             Intent intent = new Intent(this, Main2Activity_Ayuda.class);
             startActivity(intent);
+
 
         }
         else if (id == R.id.nav_quejas) {
 
         }
     }
+
+
 }
