@@ -25,6 +25,7 @@
         android:layout_gravity="start"
         app:itemIconTint="#FF6634"
         android:fitsSystemWindows="true"
+
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer">
     </android.support.design.widget.NavigationView>

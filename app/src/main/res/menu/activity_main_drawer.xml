@@ -12,19 +12,22 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_share"
-                android:checkable="true"
                 android:title="@string/compartir"
+
 
                 />
             <item
                 android:id="@+id/nav_help"
                 android:icon="@drawable/ic_help"
-                android:checkable="true"
+                android:onClick="clic"
+
                 android:title="@string/ayuda" tools:targetApi="o"/>
             <item
                 android:id="@+id/nav_quejas"
                 android:icon="@drawable/ic_info"
-                android:checkable="true"
+                android:clickable="true"
+                android:iconTint="@color/colorPrimary"
+
                 android:title="@string/quejassugerencias" />
         </menu>
     </item>

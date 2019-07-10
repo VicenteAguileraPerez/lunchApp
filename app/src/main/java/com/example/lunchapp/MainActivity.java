@@ -10,8 +10,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.transition.Transition;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -90,10 +92,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // Handle the camera action
 
         }
-        else if (id == R.id.nav_help) {
+        /*else if (id == R.id.nav_help) {
             Intent intent = new Intent(this, Main2Activity_Ayuda.class);
             startActivity(intent);
-        }
+        }*/
         else if (id == R.id.nav_quejas) {
 
         }
@@ -109,5 +111,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void clic (MenuItem item)
+    {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_share) {
+            // Handle the camera action
+
+        }
+        else if (id == R.id.nav_help) {
+
+
+
+            Intent intent = new Intent(this, Main2Activity_Ayuda.class);
+            startActivity(intent);
+
+        }
+        else if (id == R.id.nav_quejas) {
+
+        }
     }
 }
