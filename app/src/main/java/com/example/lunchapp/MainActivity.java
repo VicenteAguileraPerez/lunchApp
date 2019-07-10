@@ -10,19 +10,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.transition.Transition;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 import java.util.Objects;
+
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
 
     private boolean activarRetorno;
+    public MenuItem items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else{// si es diferente a inicio, principal usuario o principa chofer
 
-
             super.onBackPressed();
 
         }
@@ -95,6 +92,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if (id == R.id.nav_help) {
             Intent intent = new Intent(this, Main2Activity_Ayuda.class);
             startActivity(intent);
+            if(item.isCheckable())
+            {
+                //this.items = item;
+                //Toast.makeText(this,"checados",Toast.LENGTH_SHORT).show();
+
+            }
+
         }
         else if (id == R.id.nav_quejas) {
 
@@ -109,7 +113,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }*/
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
         drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 
