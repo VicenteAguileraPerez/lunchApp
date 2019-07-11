@@ -1,4 +1,4 @@
-package com.example.lunchapp;
+package fragmentsPackage;
 
 
 import android.content.SharedPreferences;
@@ -11,11 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.navigation.Navigation;
+
+import manipulacionDataLocalPackage.AdaptadorEntidadNegocio;
+import manipulacionDataLocalPackage.EntidadNegocio;
+import com.example.lunchapp.MainActivity;
+import com.example.lunchapp.R;
 
 import java.util.ArrayList;
 

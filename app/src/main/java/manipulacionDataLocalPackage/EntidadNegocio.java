@@ -1,4 +1,4 @@
-package com.example.lunchapp;
+package manipulacionDataLocalPackage;
 
 
 ///será cada negocio, la pizzeria Ramones, BurgerMan, etc, un establecimiento en especifico.

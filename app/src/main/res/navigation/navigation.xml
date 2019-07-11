@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/inicio"
-        android:name="com.example.lunchapp.inicio"
+        android:name="fragmentsPackage.inicio"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_categorias_comida" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/lugares"
-        android:name="com.example.lunchapp.Lugares"
+        android:name="fragmentsPackage.Lugares"
         android:label="fragment_lugares"
         tools:layout="@layout/fragment_lugares_mismo_tipo" >
         <action
@@ -27,14 +27,14 @@
 
     <fragment
         android:id="@+id/lugar"
-        android:name="com.example.lunchapp.Lugar"
+        android:name="fragmentsPackage.Lugar"
         android:label="fragment_lugar"
         tools:layout="@layout/fragment_negocio_especifico" />
 
 
     <fragment
         android:id="@+id/presentacion_fragment"
-        android:name="com.example.lunchapp.presentacion_fragment"
+        android:name="fragmentsPackage.presentacion_fragment"
         android:label="fragment_presentacion_fragment"
         tools:layout="@layout/fragment_presentacion_fragment" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/quejasysugenencias"
-        android:name="com.example.lunchapp.quejasysugenencias"
+        android:name="fragmentsPackage.quejasysugenencias"
         android:label="fragment_quejasysugenencias"
         tools:layout="@layout/fragment_quejasysugenencias" />
 </navigation>

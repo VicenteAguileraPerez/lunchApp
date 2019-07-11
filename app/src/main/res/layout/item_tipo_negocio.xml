@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
     <!--- cada elemento del lisview -->
@@ -9,7 +10,7 @@
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:id="@+id/tipo_negocio_img"
-        android:contentDescription="@string/descripcion_tipo_negocio_img"/>
+        android:contentDescription="@string/descripcion_tipo_negocio_img" />
 
     <LinearLayout
         android:layout_width="match_parent"

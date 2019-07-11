@@ -17,7 +17,8 @@ import java.util.Objects;
 
 
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener
 {
 
     private boolean activarRetorno;
@@ -87,20 +88,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_share) {
-            // Handle the camera action
-            item.setCheckable(true);
-
+         //   item.setCheckable(true);
+            //implementar el share de la app
         }
         else if (id == R.id.nav_help) {
 
-            item.setCheckable(true);
-            if(item.isCheckable())
+            //item.setCheckable(true);
+           // item.setChecked(true);
+         /*   if(item.isCheckable())
             {
 
                 Toast.makeText(this,"checados",Toast.LENGTH_SHORT).show();
                 //item.setCheckable(false);
 
             }
+         */
             Intent intent = new Intent(this, Main2Activity_Ayuda.class);
             startActivity(intent);
 
@@ -110,41 +112,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             item.setCheckable(true);
         }
 
-        /*else if (id == R.id.nav_tools) {
-
-        }
-        else if (id == R.id.nav_share) {
-
-        }
-        else if (id == R.id.nav_send) {
-
-        }*/
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
     }
-
-    /*public void clic (MenuItem item)
-    {
-        int id = item.getItemId();
-
-        if (id == R.id.nav_share) {
-            // Handle the camera action
-
-        }
-        else if (id == R.id.nav_help) {
-
-            Intent intent = new Intent(this, Main2Activity_Ayuda.class);
-            startActivity(intent);
-
-
-        }
-        else if (id == R.id.nav_quejas) {
-
-        }
-    }*/
 
 
 }

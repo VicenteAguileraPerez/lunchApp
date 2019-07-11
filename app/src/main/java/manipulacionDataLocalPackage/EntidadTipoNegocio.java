@@ -1,4 +1,4 @@
-package com.example.lunchapp;
+package manipulacionDataLocalPackage;
 
 public class EntidadTipoNegocio
 {

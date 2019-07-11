@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fragmentsPackage.quejasysugenencias"
+    android:background="@android:color/white">
+
+
+    <TextView
+        android:id="@+id/textView6_tituloayudaycomentarios"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".quejasysugenencias"
-        android:background="@android:color/white">
+        android:layout_height="wrap_content"
+        android:text="" />
 
+    <EditText
+        android:id="@+id/editText_correodecontacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:autofillHints=""
+        android:hint="@string/email_usuario"
+        android:backgroundTint="@color/colorPrimary"
+        android:textCursorDrawable="@color/colorPrimary"
+        tools:targetApi="o" />
 
-        <TextView
-            android:id="@+id/textView6_tituloayudaycomentarios"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="" />
-
-        <EditText
-            android:id="@+id/editText_correodecontacto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:autofillHints=""
-            android:hint="@string/email_usuario"
-            android:backgroundTint="@color/colorPrimary"
-            android:textCursorDrawable="@color/colorPrimary" tools:targetApi="o" />
-
-        <EditText
-            android:id="@+id/editText_comentariodeenvio"
-            android:layout_width="match_parent"
-            android:layout_height="347dp"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:hint="@string/escribe_tu_queja_sugerencia"
-            android:backgroundTint="@color/colorPrimary"
-            android:textCursorDrawable="@color/colorPrimary"
-            android:importantForAutofill="no" tools:targetApi="o" />
+    <EditText
+        android:id="@+id/editText_comentariodeenvio"
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="@string/escribe_tu_queja_sugerencia"
+        android:backgroundTint="@color/colorPrimary"
+        android:textCursorDrawable="@color/colorPrimary"
+        android:importantForAutofill="no"
+        tools:targetApi="o" />
 
     <Button
         android:id="@+id/button_enviarcomentario"
@@ -44,6 +46,6 @@
         android:text="@string/enviar_mensaje"
         android:textColor="@color/colorblanco"
         android:textColorLink="@color/colorPrimary"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="32dp" />
 
-    </LinearLayout>
+</LinearLayout>

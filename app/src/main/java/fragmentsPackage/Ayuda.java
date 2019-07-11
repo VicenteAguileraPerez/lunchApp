@@ -1,24 +1,26 @@
-package com.example.lunchapp;
+package fragmentsPackage;
 
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lunchapp.Main2Activity_Ayuda;
+import com.example.lunchapp.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Lugar extends Fragment {
+public class Ayuda extends Fragment {
 
 
-    public Lugar() {
+    public Ayuda() {
         // Required empty public constructor
     }
 
@@ -27,20 +29,17 @@ public class Lugar extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_negocio_especifico, container, false);
+        return inflater.inflate(R.layout.fragment_ayuda, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // se niega el retroceso de fragment
-        if(getActivity() instanceof MainActivity)
+        if(getActivity() instanceof Main2Activity_Ayuda)
         {
-            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            String titulo = sharedPreferences.getString("tipo_selecciones", "Error");
-            getActivity().setTitle(titulo);
-            ((MainActivity)getActivity()).activadoRetonrno(false);
-            ((MainActivity)getActivity()).activadoToolBar(false);
+            //((MainActivity)getActivity()).activadoRetonrno(false);
+            //((Main2Activity_Ayuda)getActivity()).activadoToolBar(false);
         }
         //
     }

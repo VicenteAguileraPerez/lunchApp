@@ -1,4 +1,4 @@
-package com.example.lunchapp;
+package manipulacionDataLocalPackage;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.lunchapp.R;
+
 import java.util.ArrayList;
 
 public class AdaptadorEntidadNegocio extends BaseAdapter {

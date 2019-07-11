@@ -1,37 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Ayuda" >
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    tools:context="fragmentsPackage.Ayuda">
 
-    <TextView
-        android:id="@+id/textView6_tituloayudaycomentarios"
-        android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:text="AYUDA Y COMENTARIOS"
-        android:textColorLink="#F44336" />
+    <TextView android:id="@+id/textView6_tituloayudaycomentarios"
+        android:layout_width="match_parent" android:layout_height="37dp"
+        android:text="AYUDA Y COMENTARIOS" android:textColorLink="#F44336" />
 
-    <EditText
-        android:id="@+id/editText_correodecontacto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="15"
+    <EditText android:id="@+id/editText_correodecontacto" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:ems="15"
         android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/editText_comentariodeenvio"
-        android:layout_width="match_parent"
-        android:layout_height="319dp"
-        android:ems="15"
-        android:inputType="textPersonName"
+    <EditText android:id="@+id/editText_comentariodeenvio" android:layout_width="match_parent"
+        android:layout_height="319dp" android:ems="15" android:inputType="textPersonName"
         android:text="Coloca en este espacio tu comentario" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ENVIAR" />
+    <Button android:id="@+id/button" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="ENVIAR" />
 
 </LinearLayout>

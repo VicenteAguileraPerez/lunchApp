@@ -1,4 +1,4 @@
-package com.example.lunchapp;
+package fragmentsPackage;
 
 
 import android.content.Intent;
@@ -12,8 +12,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.navigation.Navigation;
+
+import com.example.lunchapp.MainActivity;
+import com.example.lunchapp.R;
 
 import static androidx.navigation.Navigation.findNavController;
 import static com.example.lunchapp.R.id.*;
@@ -31,7 +35,7 @@ public class presentacion_fragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_presentacion_fragment, container, false);
@@ -39,7 +43,7 @@ public class presentacion_fragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        if(getActivity() instanceof  MainActivity)
+        if(getActivity() instanceof MainActivity)
         {
             ((MainActivity)getActivity()).activadoToolBar(true);
         }
@@ -49,7 +53,12 @@ public class presentacion_fragment extends Fragment {
             @Override
             public void run()
             {
-                Navigation.findNavController(getView()).navigate(action_presentacion_fragment_to_inicio);
+                try {
+                    Navigation.findNavController(getView()).navigate(action_presentacion_fragment_to_inicio);
+                }
+                catch (Exception ex){
+                    Toast.makeText(getContext(), "Error al cargar vista principal.", Toast.LENGTH_SHORT).show();
+                }
                 /*inicio ini = new inicio();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();

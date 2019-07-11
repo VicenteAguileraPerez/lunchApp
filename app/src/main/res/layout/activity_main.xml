@@ -14,8 +14,7 @@
     <include
         layout="@layout/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent" />
     <!--- Se añade la cabecera del navigation y el menu, que se llama main drawer -->
 
     <android.support.design.widget.NavigationView
@@ -27,9 +26,7 @@
         android:fitsSystemWindows="true"
         android:clickable="true"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer">
-    </android.support.design.widget.NavigationView>
-
+        app:menu="@menu/activity_main_drawer"/>
 
 
 </android.support.v4.widget.DrawerLayout>
