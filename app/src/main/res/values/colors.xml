@@ -8,5 +8,5 @@
     <color name="colorAccent">#FF6634</color>
     <color name="colorToolBar">#ff512f</color>
     <color name="colorblanco">#FFFFFF</color>
-
+    <color name="transparente">#00FF0000</color>
 </resources>

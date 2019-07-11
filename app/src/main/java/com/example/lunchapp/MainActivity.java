@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity
 
         }
         else if (id == R.id.nav_quejas) {
-            item.setCheckable(true);
+            item.setCheckable(false);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
