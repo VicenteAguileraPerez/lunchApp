@@ -86,8 +86,8 @@ public class Lugares extends Fragment {
     {
         //se instancia de nuevo, para que no duplique datos, igualmente, aquí deberia hacer la consulta a la DB.
         listaNegocios = new ArrayList<>();
-        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1"));
-        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
         return  listaNegocios;
     }
 

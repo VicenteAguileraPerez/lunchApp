@@ -22,13 +22,16 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <!--- <TextView
-             android:id="@+id/negocio_pequena_descripcion"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-     -->
+
+        <TextView
+            android:id="@+id/negocio_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            />
+
 
     </LinearLayout>
 

@@ -46,22 +46,14 @@ public class AdaptadorEntidadNegocio extends BaseAdapter {
 
         ImageView img_foto = convertView.findViewById(R.id.negocio_img);
         TextView negocio_nombre = convertView.findViewById(R.id.negocio_nombre);
-        //si se quiere poner una pequeña descripcion del lugar, descomentar la linea a continuacion,
-        //y descomentar en item_negocio.xml, el view de pequeña descripción.
-        //TextView negocio_pequena_descripcion = convertView.findViewById(R.id.negocio_pequena_descripcion);
+        TextView negocio_descripcion = convertView.findViewById(R.id.negocio_descripcion);
 
         //metodos de la entidadNegocio
         img_foto.setImageResource(Item.getImg_foto());
         negocio_nombre.setText(Item.getNegocio_nombre());
-        //si se quiere poner una pequeña descripcion del lugar, descomentar la linea a continuacion,
-        //y descomentar en item_negocio.xml, el view de pequeña descripción.
-        // negocio_pequena_descripcion.setText(Item.get);
+        negocio_descripcion.setText(Item.getNegocio_descripcion());
 
         return convertView;
-
-
-
-
     }
 
 
