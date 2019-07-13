@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
         {
             switch (opcion)
             {
-                case "Ubuntu":
+                case "Ayuda":
                     Intent intent = new Intent(this, Main2Activity_Ayuda.class);
                     startActivity(intent);
                     break;
