@@ -10,91 +10,181 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
+
 import java.util.Objects;
 
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener
 {
 
     private boolean activarRetorno;
-    public MenuItem items;
+    private ListView listaItems;
+    private String[] items = {"Ayuda", "Android", "iOS", "Windows", "Mac OSX",
+            "Google Chrome OS", "Debian", "Mandriva", "Solaris", "Unix"};
+
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Hola mundo");
-        //se referencia la toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        mDrawerLayout = findViewById(R.id.navigation_drawer);
+        listaItems = findViewById(R.id.navigation_items);
+        listaItems.addHeaderView(cargarHeader());
+        seleccionaItem(listaItems,items);
+        setupDrawer();
+        mDrawerToggle.syncState();//sincroniza el boton del toolbar con el navigation Drawer
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
-        NavigationView navigationView = findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
-        //se crea el "botón" para abrir y cerrar el navigation menu
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.abrir_navigation_menu, R.string.cerrar_navigation_menu);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
 
 
     }
-    // metodo que prohibe que se regrese a la pantalla anterior
-    public void activadoRetonrno(boolean activarRetorno)
-    {
-        this.activarRetorno=activarRetorno;
-    }
-    public void activadoToolBar(boolean  activarToolBar)
-    {
-        if (activarToolBar)
+
+    /*******************************************
+     * METODOS PRIVATE
+     ******************************************/
+        //retorna el header para cargarlo a la listView
+        private View cargarHeader ()
         {
-             Objects.requireNonNull(getSupportActionBar()).hide();
+            return getLayoutInflater().inflate(R.layout.nav_header_main,null,false);
         }
-        else
+        //metodo que permite seleccionar los items
+        private void seleccionaItem(ListView lista,String[] items)
         {
-            Objects.requireNonNull(getSupportActionBar()).show();
+            final ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+            lista.setAdapter(adaptador);
+            //para items del navigation Drawer
+            lista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+                @Override
+                public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
+                    // TODO Auto-generated method stub
+                    try {
+                        //getSupportActionBar().setTitle(adaptador.getItem(position-1));
+                        Toast.makeText(getApplicationContext(), "Ha pulsado e;l item " + adaptador.getItem(position-1), Toast.LENGTH_SHORT).show();
+
+                        accion(adaptador.getItem(position-1));
+
+                    }
+                    catch (Exception E)
+                    {
+
+                    }
+                    mDrawerLayout.closeDrawer(GravityCompat.START);
+
+                }
+            });
         }
+        private void accion(String opcion)
+        {
+            switch (opcion)
+            {
+                case "Ubuntu":
+                    Intent intent = new Intent(this, Main2Activity_Ayuda.class);
+                    startActivity(intent);
+                    break;
+            }
+
+        }
+        private void setupDrawer()
+        {
+            mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close){
+
+                @Override
+                public void onDrawerOpened(View drawerView) {
+                    super.onDrawerOpened(drawerView);
+                    invalidateOptionsMenu();
+                }
+
+                @Override
+                public void onDrawerClosed(View drawerView) {
+                    super.onDrawerClosed(drawerView);
+                    //getSupportActionBar().setTitle(mActivityTitle);
+                    invalidateOptionsMenu();
+                }
+            };
+
+            mDrawerToggle.setDrawerIndicatorEnabled(true);
+            mDrawerLayout.setDrawerListener(mDrawerToggle);
+        }
+     /********************************************/
+
+    /*******************************************
+     * METODOS PUBLIC
+     ******************************************/
+        // metodo que prohibe que se regrese a la pantalla anterior
+        public void activadoRetonrno(boolean activarRetorno)
+        {
+            this.activarRetorno=activarRetorno;
+        }
+
+        // metodo que permite que sea visible el toolbar o no sea
+        public void activadoToolBar(boolean  activarToolBar)
+        {
+            if (activarToolBar)
+            {
+                 Objects.requireNonNull(getSupportActionBar()).hide();//oculta el toolbar
+            }
+            else
+            {
+                Objects.requireNonNull(getSupportActionBar()).show();//muestra el toolbar
+            }
 
     }
-
+    /********************************************/
+    /*******************************************
+     * METODOS PUBLIC
+     ******************************************/
     @Override
     public void onBackPressed()
     {
 
         //utilizado para definir cuando si puedo regresar y cuando no
-
-
-        if (activarRetorno)//se asigna 1 en el fragment principal chofer y usuario
-        {//the fragment on which you want to handle your back press
+        if (activarRetorno)
+        {
             finish();
         }
-        else{// si es diferente a inicio, principal usuario o principa chofer
+        else{
 
             super.onBackPressed();
 
         }
     }
-
-
+    //para items del toolbar
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
+        if(mDrawerToggle.onOptionsItemSelected(item))
+            return true;
+
+        return super.onOptionsItemSelected(item);
+    }
+    /********************************************/
+
+
+    /*@Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
         if (id == R.id.nav_share) {
          //   item.setCheckable(true);
             //implementar el share de la app
         }
         else if (id == R.id.nav_help) {
 
-            //item.setCheckable(true);
-           // item.setChecked(true);
+              //item.setCheckable(true);
+              //item.setChecked(false);
          /*   if(item.isCheckable())
             {
 
@@ -103,7 +193,7 @@ public class MainActivity extends AppCompatActivity
 
             }
          */
-            Intent intent = new Intent(this, Main2Activity_Ayuda.class);
+          /*  Intent intent = new Intent(this, Main2Activity_Ayuda.class);
             startActivity(intent);
 
 
@@ -117,7 +207,7 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
-    }
+    }*/
 
 
 }

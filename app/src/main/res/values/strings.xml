@@ -22,5 +22,7 @@
     <string name="escribe_tu_queja_sugerencia">Escribe tu queja o sugerencia</string>
     <string name="buscar_tipo_negocio">Buscar negocios</string>
     <string name="buscar_negocio">Buscar</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
 </resources>

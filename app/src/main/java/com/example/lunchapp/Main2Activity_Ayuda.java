@@ -15,8 +15,6 @@ public class Main2Activity_Ayuda extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2__ayuda);
-        //llamada al método para que se active la flecha en el Actionbar
-        //setupActionBar();
     }
 
     //aplicacion del retorno
@@ -29,14 +27,6 @@ public class Main2Activity_Ayuda extends AppCompatActivity {
         }
         return true;
     }
-    //activar la -> en el actionbar para regresar
 
-    /*private void setupActionBar()
-    {
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Ayuda");
 
-    }*/
 }
