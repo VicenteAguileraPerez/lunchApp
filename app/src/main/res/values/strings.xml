@@ -24,5 +24,11 @@
     <string name="buscar_negocio">Buscar</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="direcciones">Direcciones</string>
+    <string name="direccion">direccion</string>
+    <string name="menu">menu</string>
+    <string name="pago">pago</string>
+    <string name="redes">redes</string>
+    <string name="opinion">opinion</string>
 
 </resources>

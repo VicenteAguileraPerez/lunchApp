@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity
     }
     /********************************************/
     /*******************************************
-     * METODOS PUBLIC
+     * METODOS OVERRIDE
      ******************************************/
     @Override
     public void onBackPressed()
@@ -172,41 +172,6 @@ public class MainActivity extends AppCompatActivity
     }
     /********************************************/
 
-
-    /*@Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.nav_share) {
-         //   item.setCheckable(true);
-            //implementar el share de la app
-        }
-        else if (id == R.id.nav_help) {
-
-              //item.setCheckable(true);
-              //item.setChecked(false);
-         /*   if(item.isCheckable())
-            {
-
-                Toast.makeText(this,"checados",Toast.LENGTH_SHORT).show();
-                //item.setCheckable(false);
-
-            }
-         */
-          /*  Intent intent = new Intent(this, Main2Activity_Ayuda.class);
-            startActivity(intent);
-
-
-        }
-        else if (id == R.id.nav_quejas) {
-            item.setCheckable(false);
-        }
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-
-        drawer.closeDrawer(GravityCompat.START);
-
-        return true;
-    }*/
 
 
 }
