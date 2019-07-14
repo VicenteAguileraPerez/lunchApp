@@ -8,6 +8,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,7 @@ public class Lugar extends Fragment {
 
     private TabLayout tabLayout;
     private int numero_fragment =-1;
+    private ViewPager viewPager;
     public Lugar() {
         // Required empty public constructor
     }
@@ -55,23 +58,31 @@ public class Lugar extends Fragment {
             ((MainActivity)getActivity()).activadoToolBar(false);
         }
         //
-        Fragment fragment = new direcciones();
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_secundario,fragment).commit();
+        //Fragment fragment = new direcciones();
+        //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_secundario,fragment).commit();
 
 
         tabLayout = view.findViewById(R.id.tabs);
-        tabLayout.setOnTabSelectedListener(listener);
+        viewPager = view.findViewById(R.id.pager);
+        PagerAdapter pagerAdapter = new manipulacionDataLocalPackage.PagerAdapter(getActivity().getSupportFragmentManager(),tabLayout.getTabCount());
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+       tabLayout.addOnTabSelectedListener(listener);
 
 
     }
     TabLayout.OnTabSelectedListener listener = new TabLayout.OnTabSelectedListener() {
         @Override
         public void onTabSelected(TabLayout.Tab tab) {
-            int id = tab.getPosition();
-            String fragmento = tab.getContentDescription().toString();
-            numero_fragment=id;
 
-            getNumeroFragmento();
+            String fragmento = tab.getContentDescription().toString();
+            //numero_fragment=id;
+            Toast.makeText(getActivity(), fragmento, Toast.LENGTH_SHORT).show();
+                viewPager.setCurrentItem(tab.getPosition());
+
+
+
+            //getNumeroFragmento();
         }
         @Override
         public void onTabUnselected(TabLayout.Tab tab) {
@@ -83,7 +94,7 @@ public class Lugar extends Fragment {
 
         }
     };
-    private void getNumeroFragmento(){
+    /*private void getNumeroFragmento(){
         Fragment fragment = null;
         switch (numero_fragment) {
             case 0:
@@ -112,7 +123,7 @@ public class Lugar extends Fragment {
         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_secundario,fragment).commit();
 
         Toast.makeText(getActivity(), String.valueOf(numero_fragment), Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 
 }
