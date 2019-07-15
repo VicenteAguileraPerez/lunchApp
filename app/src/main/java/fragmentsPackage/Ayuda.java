@@ -77,12 +77,7 @@ public class Ayuda extends Fragment {
                     return false;
                 }
             });
-            boton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
-                }
-            });
+
         //}
         boton = view.findViewById(R.id.btnAyuda);
 
@@ -96,7 +91,7 @@ public class Ayuda extends Fragment {
                         botonA.setTextColor(getResources().getColor(R.color.colorblanco));
                         botonA.setBackgroundColor(Color.parseColor("#FF6634"));
                         botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_white, 0, 0, 0);
-                        Navigation.findNavController(v).navigate(R.id.action_ayuda_to_problemasTecnicos);
+                        Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
                         return true;
                     case MotionEvent.ACTION_UP:
                         botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -112,5 +107,10 @@ public class Ayuda extends Fragment {
 
     }
 
-
+    //cuando regrese de otro fragment, reestablezca el titulo
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle(R.string.ayuda);
+    }
 }
