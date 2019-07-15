@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
 
     private boolean activarRetorno;
     private ListView listaItems;
-    private String[] items = {"Ayuda"};
+    private String[] items = {"Ayuda", "Quejas y sugerencias"};
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -85,13 +85,17 @@ public class MainActivity extends AppCompatActivity
         // metodo para ver que opción del menu fue selccionada y abrir la actividad
         private void accion(String opcion)
         {
+            Intent intent = null;
             switch (opcion)
             {
                 case "Ayuda":
-                    Intent intent = new Intent(this, Main2Activity_Ayuda.class);
-                    startActivity(intent);
+                    intent = new Intent(this, Main2Activity_Ayuda.class);
+
                     break;
+                case "Quejas y sugerencias":
+                    intent = new Intent(this,Main2Activity_quejassugerencias.class);
             }
+            startActivity(intent);
 
         }
         //metodo para aplicar el efecto que se cambien las rallitas del toolbar por la flecha

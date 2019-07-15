@@ -41,9 +41,4 @@
             android:id="@+id/action_presentacion_fragment_to_inicio"
             app:destination="@id/inicio" />
     </fragment>
-    <fragment
-        android:id="@+id/quejasysugenencias"
-        android:name="fragmentsPackage.quejasysugenencias"
-        android:label="fragment_quejasysugenencias"
-        tools:layout="@layout/fragment_quejasysugenencias" />
 </navigation>
