@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.lunchapp.Main2Activity_Ayuda;
 import com.example.lunchapp.R;
 
 
@@ -33,7 +32,7 @@ public class Ayuda extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ayuda, container, false);
+        return inflater.inflate(R.layout.fragment_menu_ayuda, container, false);
     }
 
     @Override
