@@ -17,12 +17,14 @@
             android:id="@+id/action_ayuda_to_ayuda2"
             app:destination="@id/ayuda2" />
     </fragment>
+
     <fragment
         android:id="@+id/problemasTecnicos"
         android:name="fragmentsNavigationAyuda.ProblemasTecnicos"
         android:label="ProblemasTecnicos"
         tools:layout="@layout/fragment_problemas_tecnicos"
         />
+
     <fragment
         android:id="@+id/ayuda2"
         android:name="fragmentsNavigationAyuda.Ayuda"

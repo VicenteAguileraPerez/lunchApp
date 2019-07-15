@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.navigation.Navigation;
+
 import com.example.lunchapp.R;
 
 
@@ -63,6 +65,7 @@ public class Ayuda extends Fragment {
                             botonA.setTextColor(getResources().getColor(R.color.colorblanco));
                             botonA.setBackgroundColor(Color.parseColor("#FF6634"));
                             botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_wrech_white, 0, 0, 0);
+                            Navigation.findNavController(v).navigate(R.id.action_ayuda_to_problemasTecnicos);
 
                             return true;
                         case MotionEvent.ACTION_UP:
@@ -72,6 +75,12 @@ public class Ayuda extends Fragment {
                             return true;
                     }
                     return false;
+                }
+            });
+            boton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
                 }
             });
         //}
@@ -87,7 +96,7 @@ public class Ayuda extends Fragment {
                         botonA.setTextColor(getResources().getColor(R.color.colorblanco));
                         botonA.setBackgroundColor(Color.parseColor("#FF6634"));
                         botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_white, 0, 0, 0);
-
+                        Navigation.findNavController(v).navigate(R.id.action_ayuda_to_problemasTecnicos);
                         return true;
                     case MotionEvent.ACTION_UP:
                         botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -102,4 +111,6 @@ public class Ayuda extends Fragment {
 
 
     }
+
+
 }
