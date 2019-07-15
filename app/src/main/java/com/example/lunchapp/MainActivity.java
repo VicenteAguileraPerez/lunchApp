@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity
 
     private boolean activarRetorno;
     private ListView listaItems;
-    private String[] items = {"Ayuda", "Android", "iOS", "Windows", "Mac OSX",
-            "Google Chrome OS", "Debian", "Mandriva", "Solaris", "Unix"};
+    private String[] items = {"Ayuda"};
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;

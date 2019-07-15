@@ -17,10 +17,6 @@ import androidx.navigation.Navigation;
 
 import com.example.lunchapp.R;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class Ayuda extends Fragment {
 
     int botonesAyudaColeccion[];
@@ -55,6 +51,9 @@ public class Ayuda extends Fragment {
       //  for ( int actual:botonesAyudaColeccion) {
             Button boton = view.findViewById(R.id.btnProblemasTecnicos);
 
+
+            boton.setClickable(true);
+
             boton.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -65,18 +64,32 @@ public class Ayuda extends Fragment {
                             botonA.setTextColor(getResources().getColor(R.color.colorblanco));
                             botonA.setBackgroundColor(Color.parseColor("#FF6634"));
                             botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_wrech_white, 0, 0, 0);
-                            Navigation.findNavController(v).navigate(R.id.action_ayuda_to_problemasTecnicos);
 
-                            return true;
+                            //retorna falso para que se puedan recibir clicks, y para que si el boton se desliza y se suelta
+                            // , se active el clickListener
+
+                            return false;
                         case MotionEvent.ACTION_UP:
                             botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
                             botonA.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
                             botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_wrench_orange, 0, 0, 0);
-                            return true;
+                            //Navigation.findNavController(v).navigate(R.id.action_ayuda_to_problemasTecnicos);
+                            return false;
                     }
                     return false;
                 }
             });
+/*
+* The TouchListener is executed before the view can respond to the event. The ClickListener will receive its event only after the view has handled it.
+* Vic
+* */
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_ayuda_to_problemasTecnicos);
+            }
+        });
+
 
         //}
         boton = view.findViewById(R.id.btnAyuda);
@@ -91,15 +104,21 @@ public class Ayuda extends Fragment {
                         botonA.setTextColor(getResources().getColor(R.color.colorblanco));
                         botonA.setBackgroundColor(Color.parseColor("#FF6634"));
                         botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_white, 0, 0, 0);
-                        Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
-                        return true;
+                        return false;
                     case MotionEvent.ACTION_UP:
                         botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
                         botonA.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
                         botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_orange, 0, 0, 0);
-                        return true;
+                        //Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
+                        return false;
                 }
                 return false;
+            }
+        });
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
             }
         });
 
