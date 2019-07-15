@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/holo_green_dark"
-    tools:context=".formas_pago">
+    tools:context="fragmentsTabs.formas_pago">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +24,7 @@
                 android:text="@string/pago"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:textSize="40dp"
+                android:textSize="40sp"
                 android:textColor="@android:color/white"
               />
 

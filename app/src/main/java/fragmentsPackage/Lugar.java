@@ -17,10 +17,6 @@ import android.widget.Toast;
 
 import com.example.lunchapp.MainActivity;
 import com.example.lunchapp.R;
-import com.example.lunchapp.direcciones;
-import com.example.lunchapp.formas_pago;
-import com.example.lunchapp.menu_comida;
-import com.example.lunchapp.redes_sociales;
 
 
 /**
@@ -57,17 +53,13 @@ public class Lugar extends Fragment {
             ((MainActivity)getActivity()).activadoRetonrno(false);
             ((MainActivity)getActivity()).activadoToolBar(false);
         }
-        //
-        //Fragment fragment = new direcciones();
-        //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_secundario,fragment).commit();
-
 
         tabLayout = view.findViewById(R.id.tabs);
         viewPager = view.findViewById(R.id.pager);
         PagerAdapter pagerAdapter = new manipulacionDataLocalPackage.PagerAdapter(getActivity().getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-       tabLayout.addOnTabSelectedListener(listener);
+        tabLayout.addOnTabSelectedListener(listener);
 
 
     }

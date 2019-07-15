@@ -4,10 +4,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.lunchapp.direcciones;
-import com.example.lunchapp.menu_comida;
-import com.example.lunchapp.formas_pago;
-import com.example.lunchapp.redes_sociales;
+import fragmentsTabs.direcciones;
+import fragmentsTabs.menu_comida;
+import fragmentsTabs.formas_pago;
+import fragmentsTabs.redes_sociales;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
 

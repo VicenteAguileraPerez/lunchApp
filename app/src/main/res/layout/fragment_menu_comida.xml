@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/holo_purple"
-    tools:context=".menu_comida">
+    tools:context="fragmentsTabs.menu_comida">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +23,7 @@
                 android:text="@string/menu"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:textSize="40dp"
+                android:textSize="40sp"
                 android:textColor="@android:color/white"
                 />
 

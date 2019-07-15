@@ -1,23 +1,16 @@
-package com.example.lunchapp;
+package fragmentsTabs;
 
-import android.content.Context;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lunchapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link formas_pago.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link formas_pago#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class formas_pago extends Fragment {
+
+public class direcciones extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +22,7 @@ public class formas_pago extends Fragment {
 
 
 
-    public formas_pago() {
+    public direcciones() {
         // Required empty public constructor
     }
 
@@ -39,11 +32,11 @@ public class formas_pago extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment formas_pago.
+     * @return A new instance of fragment direcciones.
      */
     // TODO: Rename and change types and number of parameters
-    public static formas_pago newInstance(String param1, String param2) {
-        formas_pago fragment = new formas_pago();
+    public static direcciones newInstance(String param1, String param2) {
+        direcciones fragment = new direcciones();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +57,7 @@ public class formas_pago extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_formas_pago, container, false);
+        return inflater.inflate(R.layout.fragment_direcciones, container, false);
     }
 
 

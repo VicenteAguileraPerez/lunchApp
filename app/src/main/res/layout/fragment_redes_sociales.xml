@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/holo_blue_light"
-    tools:context=".redes_sociales">
+    tools:context="fragmentsTabs.redes_sociales">
 
     <ScrollView
         android:layout_width="match_parent"
