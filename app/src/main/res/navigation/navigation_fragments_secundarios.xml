@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_fragments_secundarios"
+    app:startDestination="@id/direcciones2">
+
+    <fragment
+        android:id="@+id/direcciones2"
+        android:name="fragmentsTabs.direcciones"
+        android:label="fragment_direcciones"
+        tools:layout="@layout/fragment_direcciones" />
+    <fragment
+        android:id="@+id/formas_pago2"
+        android:name="fragmentsTabs.formas_pago"
+        android:label="fragment_formas_pago"
+        tools:layout="@layout/fragment_formas_pago" />
+    <fragment
+        android:id="@+id/menu_comida2"
+        android:name="fragmentsTabs.menu_comida"
+        android:label="fragment_menu_comida"
+        tools:layout="@layout/fragment_menu_comida" />
+    <fragment
+        android:id="@+id/redes_sociales2"
+        android:name="fragmentsTabs.redes_sociales"
+        android:label="fragment_redes_sociales"
+        tools:layout="@layout/fragment_redes_sociales" />
+</navigation>
