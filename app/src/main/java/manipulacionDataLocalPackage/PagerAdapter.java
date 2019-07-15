@@ -11,7 +11,7 @@ import fragmentsTabs.redes_sociales;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
 
-    int numeroTabs;
+    private int numeroTabs;
 
     public PagerAdapter(FragmentManager fm, int numeroTabs) {
         super(fm);
@@ -22,17 +22,13 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                direcciones direcciones = new direcciones();
-                return direcciones;
+                return new direcciones();
             case 1:
-                menu_comida menu_comida = new menu_comida();
-                return  menu_comida;
+                return  new menu_comida();
             case 2:
-                formas_pago formas_pago = new formas_pago();
-                return formas_pago;
+                return new formas_pago();
             case 3:
-                redes_sociales redes_sociales = new redes_sociales();
-                return redes_sociales;
+                return new redes_sociales();
             case 4:
                 return null;
             default:
