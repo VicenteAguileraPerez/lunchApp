@@ -11,24 +11,22 @@
         android:label="fragment_ayuda"
         tools:layout="@layout/fragment_menu_ayuda" >
         <action
-            android:id="@+id/action_ayuda_to_problemasTecnicos"
-            app:destination="@id/problemasTecnicos" />
-        <action
             android:id="@+id/action_ayuda_to_ayuda2"
             app:destination="@id/ayuda2" />
+        <action
+            android:id="@+id/action_ayuda_to_quejasysugenencias2"
+            app:destination="@id/quejasysugenencias2" />
     </fragment>
-
-    <fragment
-        android:id="@+id/problemasTecnicos"
-        android:name="fragmentsNavigationAyuda.ProblemasTecnicos"
-        android:label="ProblemasTecnicos"
-        tools:layout="@layout/fragment_problemas_tecnicos"
-        />
 
     <fragment
         android:id="@+id/ayuda2"
         android:name="fragmentsNavigationAyuda.Ayuda"
         android:label="Ayuda"
         tools:layout="@layout/fragment_ayuda"/>
+    <fragment
+        android:id="@+id/quejasysugenencias2"
+        android:name="fragmentsPackage.quejasysugenencias"
+        android:label="fragment_quejasysugenencias"
+        tools:layout="@layout/fragment_quejasysugenencias" />
 
 </navigation>
