@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:orientation="vertical"
-    tools:context="fragmentsPackage.Ayuda">
+    tools:context="fragmentsPackage.Ayuda"
+    android:layout_margin="16dp"
+    >
 
 
     <Button
         android:id="@+id/btnProblemasTecnicos"
-        android:layout_width="240dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="280dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/transparent_button_inactive"
-        android:text="TROUBLESHOOTING"
+        android:text="@string/problemas_tecnicos"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:drawableStart="@drawable/ic_wrench_orange"
+        android:layout_gravity="center"
+
         />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnAyuda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_button_inactive"
+        android:text="@string/ayuda"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:drawableStart="@drawable/ic_help_orange"
+        android:layout_gravity="center"
+
+        />
+
+
+</LinearLayout>

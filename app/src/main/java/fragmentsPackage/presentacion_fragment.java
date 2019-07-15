@@ -59,12 +59,7 @@ public class presentacion_fragment extends Fragment {
                 catch (Exception ex){
                     Toast.makeText(getContext(), "Error al cargar vista principal.", Toast.LENGTH_SHORT).show();
                 }
-                /*inicio ini = new inicio();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_to_right,R.anim.exit_to_right,R.anim.enter_to_right,R.anim.exit_to_right);
-                transaction.addToBackStack(null);
-                transaction.add(R.id.fragment,ini).commit();*/
+
 
             }
         },1000);

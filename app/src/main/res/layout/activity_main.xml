@@ -29,7 +29,8 @@
         android:layout_width="260dp"
         android:layout_height="match_parent"
         android:background="@android:color/white"
-        ></ListView>
+        android:divider="@color/colorThird"
+        />
 
 
 </android.support.v4.widget.DrawerLayout>

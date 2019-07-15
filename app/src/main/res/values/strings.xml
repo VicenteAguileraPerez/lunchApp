@@ -29,6 +29,7 @@
     <string name="menu">menu</string>
     <string name="pago">pago</string>
     <string name="redes">redes</string>
-    <string name="opinion">opinion</string>
+    <string name="opinion">opinión</string>
+    <string name="problemas_tecnicos">Problemas técnicos</string>
 
 </resources>

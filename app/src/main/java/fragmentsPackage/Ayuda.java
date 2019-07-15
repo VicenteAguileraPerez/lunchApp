@@ -22,6 +22,7 @@ import com.example.lunchapp.R;
  */
 public class Ayuda extends Fragment {
 
+    int botonesAyudaColeccion[];
 
     public Ayuda() {
         // Required empty public constructor
@@ -39,12 +40,43 @@ public class Ayuda extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // se niega el retroceso de fragment
-        if(getActivity() instanceof Main2Activity_Ayuda)
+        /*if(getActivity() instanceof Main2Activity_Ayuda)
         {
             //((MainActivity)getActivity()).activadoRetonrno(false);
             //((Main2Activity_Ayuda)getActivity()).activadoToolBar(false);
         }
-        Button boton = view.findViewById(R.id.btnProblemasTecnicos);
+*/
+        botonesAyudaColeccion = new int[]{
+          R.id.btnProblemasTecnicos,
+          R.id.btnAyuda
+        };
+
+      //  for ( int actual:botonesAyudaColeccion) {
+            Button boton = view.findViewById(R.id.btnProblemasTecnicos);
+
+            boton.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    Button botonA = (Button) v;
+                    switch(event.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+
+                            botonA.setTextColor(getResources().getColor(R.color.colorblanco));
+                            botonA.setBackgroundColor(Color.parseColor("#FF6634"));
+                            botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_wrech_white, 0, 0, 0);
+
+                            return true;
+                        case MotionEvent.ACTION_UP:
+                            botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
+                            botonA.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
+                            botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_wrench_orange, 0, 0, 0);
+                            return true;
+                    }
+                    return false;
+                }
+            });
+        //}
+        boton = view.findViewById(R.id.btnAyuda);
 
         boton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -52,26 +84,23 @@ public class Ayuda extends Fragment {
                 Button botonA = (Button) v;
                 switch(event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                      //  botonA.setBackgroundColor(Color.parseColor("#FF6634"));
-                        //botonA.setHintTextColor(getResources().getColor(R.color.colorblanco));
+
                         botonA.setTextColor(getResources().getColor(R.color.colorblanco));
                         botonA.setBackgroundColor(Color.parseColor("#FF6634"));
+                        botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_white, 0, 0, 0);
+
                         return true;
                     case MotionEvent.ACTION_UP:
                         botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
                         botonA.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
+                        botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_orange, 0, 0, 0);
                         return true;
                 }
                 return false;
             }
         });
-     /*   boton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                v.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                ((Button)v).setHintTextColor(Color.parseColor("#FF6634"));
-            }
-        });*/
-        //
+
+
+
     }
 }
