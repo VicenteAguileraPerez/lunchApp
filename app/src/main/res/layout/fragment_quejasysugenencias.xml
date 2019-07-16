@@ -52,6 +52,6 @@
             android:text="@string/enviar_mensaje"
             android:textColor="@color/colorPrimary"
             android:textColorLink="@color/colorPrimary"
-            android:background="@color/colorblanco"/>
+            android:background="@drawable/transparent_button_inactive"/>
 
 </LinearLayout>

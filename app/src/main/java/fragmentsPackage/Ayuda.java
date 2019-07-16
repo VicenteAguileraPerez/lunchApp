@@ -50,7 +50,7 @@ public class Ayuda extends Fragment {
 
                             botonAyuda.setTextColor(getResources().getColor(R.color.colorblanco));
                             botonAyuda.setBackgroundColor(Color.parseColor("#FF6634"));
-                            botonAyuda.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_wrench_100_orange, 0, 0, 0);
+                            botonAyuda.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_wrench_100_white, 0, 0, 0);
 
                             //retorna falso para que se puedan recibir clicks, y para que si el boton se desliza y se suelta
                             // , se active el clickListener
@@ -58,8 +58,9 @@ public class Ayuda extends Fragment {
                             return false;
                         case MotionEvent.ACTION_UP:
                             botonAyuda.setTextColor(getResources().getColor(R.color.colorPrimary));
-                            botonAyuda.setBackground(getResources().getDrawable(R.color.colorblanco));
-                            //botonAyuda.setCompoundDrawablesWithIntrinsicBounds(, 0, 0, 0);
+                            botonAyuda.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
+                            botonAyuda.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_wrench_100_orange, 0, 0, 0);
+
                             return false;
                     }
                     return false;
@@ -90,13 +91,12 @@ public class Ayuda extends Fragment {
 
                         botonA.setTextColor(getResources().getColor(R.color.colorblanco));
                         botonA.setBackgroundColor(Color.parseColor("#FF6634"));
-                        botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_white, 0, 0, 0);
+                        botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_help_100_white, 0, 0, 0);
                         return false;
                     case MotionEvent.ACTION_UP:
                         botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
                         botonA.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
-                        botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_help_orange, 0, 0, 0);
-                        Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
+                        botonA.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_help_100_orange, 0, 0, 0);
                         return false;
                 }
                 return false;

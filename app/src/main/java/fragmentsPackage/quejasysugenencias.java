@@ -52,7 +52,7 @@ public class quejasysugenencias extends Fragment {
                         return false;
                     case MotionEvent.ACTION_UP:
                         botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
-                        botonA.setBackground(getResources().getDrawable(R.color.colorblanco));
+                        botonA.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
                         return false;
                 }
                 return false;
