@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity
     private boolean activarRetorno;
     private ListView listaItems;
     private String[] items = {"Ayuda", "Quejas y sugerencias"};
+
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity
                     // TODO Auto-generated method stub
                     try {
                         //getSupportActionBar().setTitle(adaptador.getItem(position-1));
-                        Toast.makeText(getApplicationContext(), "Ha pulsado e;l item " + adaptador.getItem(position-1), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Ha pulsado e;l item " + adaptador.getItem(position-1), Toast.LENGTH_SHORT).show();
 
                         accion(adaptador.getItem(position-1));
 
@@ -155,11 +157,24 @@ public class MainActivity extends AppCompatActivity
         //utilizado para definir cuando si puedo regresar y cuando no
         if (activarRetorno)
         {
-            finish();
+            if(listaItems.getVisibility() == View.VISIBLE)
+            {
+                mDrawerLayout.closeDrawer(Gravity.START);
+            }
+            else{
+                finish();
+            }
+
         }
         else{
+            if(listaItems.getVisibility() == View.VISIBLE)
+            {
+                mDrawerLayout.closeDrawer(Gravity.START);
+            }
+            else{
+                super.onBackPressed();
+            }
 
-            super.onBackPressed();
 
         }
     }
