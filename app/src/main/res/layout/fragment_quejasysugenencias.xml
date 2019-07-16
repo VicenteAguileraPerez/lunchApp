@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,43 +14,44 @@
 
 
 
-    <EditText
-        android:id="@+id/editText_correodecontacto"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:autofillHints=""
-        android:hint="@string/email_usuario"
-        android:backgroundTint="@color/colorPrimary"
-        android:textCursorDrawable="@color/colorPrimary"
-        tools:targetApi="o" />
 
-    <EditText
-        android:id="@+id/editText_comentariodeenvio"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2.5"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:hint="@string/escribe_tu_queja_sugerencia"
-        android:gravity="top"
-        android:backgroundTint="@color/colorPrimary"
-        android:textCursorDrawable="@color/colorPrimary"
-        android:importantForAutofill="no"
-        tools:targetApi="o" />
+        <EditText
+            android:id="@+id/editText_correodecontacto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:autofillHints=""
+            android:backgroundTint="@color/colorPrimary"
+            android:ems="10"
+            android:hint="@string/email_usuario"
+            android:inputType="textEmailAddress"
+            android:textCursorDrawable="@color/colorPrimary"
+            tools:targetApi="o" />
 
-    <Button
-        android:id="@+id/button_enviarcomentario"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:background="@color/colorPrimary"
-        android:text="@string/enviar_mensaje"
-        android:textColor="@color/colorblanco"
-        android:textColorLink="@color/colorPrimary"
-        android:layout_marginTop="10dp"
-        />
+        <EditText
+            android:id="@+id/editText_comentariodeenvio"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:backgroundTint="@color/colorPrimary"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/escribe_tu_queja_sugerencia"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:textCursorDrawable="@color/colorPrimary"
+            tools:targetApi="o" />
+
+        <Button
+            android:id="@+id/button_enviarcomentario"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+
+            android:text="@string/enviar_mensaje"
+            android:textColor="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
+            android:background="@color/colorblanco"/>
 
 </LinearLayout>

@@ -1,13 +1,16 @@
 package fragmentsPackage;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.lunchapp.MainActivity;
 import com.example.lunchapp.R;
@@ -18,7 +21,7 @@ import com.example.lunchapp.R;
  */
 public class quejasysugenencias extends Fragment {
 
-
+    private Button button_enviar_comentario;
     public quejasysugenencias() {
         // Required empty public constructor
     }
@@ -35,9 +38,25 @@ public class quejasysugenencias extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if(getActivity() instanceof MainActivity){
-            ((MainActivity)getActivity()).activadoRetonrno(false);
-            ((MainActivity)getActivity()).activadoToolBar(false);
-        }
+        button_enviar_comentario= view.findViewById(R.id.button_enviarcomentario);
+
+        button_enviar_comentario.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Button botonA = (Button) v;
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+
+                        botonA.setTextColor(getResources().getColor(R.color.colorblanco));
+                        botonA.setBackgroundColor(Color.parseColor("#FF6634"));
+                        return false;
+                    case MotionEvent.ACTION_UP:
+                        botonA.setTextColor(getResources().getColor(R.color.colorPrimary));
+                        botonA.setBackground(getResources().getDrawable(R.color.colorblanco));
+                        return false;
+                }
+                return false;
+            }
+        });
     }
 }
