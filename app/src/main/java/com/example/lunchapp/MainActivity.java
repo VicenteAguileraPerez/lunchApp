@@ -3,6 +3,7 @@ package com.example.lunchapp;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity
     private boolean activarRetorno;
     private ListView listaItems;
     private String[] items = {"Ayuda", "Quejas y sugerencias"};
-
+    //CoordinatorLayout coordinatorLayout;
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity
         seleccionaItem(listaItems,items);
         setupDrawer();
       //  mDrawerLayout.setScrimColor(getResources().getColor(R.color.colorThird) );
+          mDrawerLayout.setScrimColor(getResources().getColor(R.color.transparente) );
+
+
         //mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.colorblanco));
         //cambia el color de las 3 barritas del toggle
         mDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorblanco));
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         mDrawerToggle.syncState();//sincroniza el boton del toolbar con el navigation Drawer
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-
+     //   coordinatorLayout = findViewById(R.id.coordinator_main);
 
 
 
@@ -125,6 +129,14 @@ public class MainActivity extends AppCompatActivity
                     //getSupportActionBar().setTitle(mActivityTitle);
                     invalidateOptionsMenu();
                 }
+             /*
+                @Override
+                public void onDrawerSlide(View drawerView, float slideOffset) {
+                    super.onDrawerSlide(drawerView, slideOffset);
+                    float slideX = drawerView.getWidth() * slideOffset;
+                    coordinatorLayout.setTranslationX(slideX);
+                }
+                */
             };
 
             mDrawerToggle.setDrawerIndicatorEnabled(true);

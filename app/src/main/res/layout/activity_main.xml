@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:id="@+id/navigation_drawer"
     tools:context=".MainActivity"
+    android:background="#FF0000"
+
     >
 
     <android.support.design.widget.CoordinatorLayout
@@ -64,8 +66,11 @@
         android:dividerHeight="1dp"
         android:layout_width="260dp"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
+
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/colorgris"
         android:divider="@color/colorThird"
+
 
         />
 
