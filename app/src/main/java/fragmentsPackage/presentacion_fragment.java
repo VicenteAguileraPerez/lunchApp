@@ -62,6 +62,6 @@ public class presentacion_fragment extends Fragment {
 
 
             }
-        },1000);
+        },2000);
     }
 }

@@ -71,13 +71,6 @@ public class inicio extends Fragment{
 
                 Navigation.findNavController(view).navigate(R.id.action_inicio_to_lugares);
 
-                /*Lugares lugares = new Lugares();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_to_right,R.anim.exit_to_right,R.anim.enter_to_right,R.anim.exit_to_right);
-                transaction.addToBackStack(null);
-                transaction.add(R.id.fragment,lugares).commit();*/
-                //Toast.makeText(getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
             }
         });
         return view;
@@ -89,6 +82,21 @@ public class inicio extends Fragment{
     private ArrayList<EntidadTipoNegocio> getTiposNegocios()
     {
         listaTipoNegocios = new ArrayList<>();
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Tipo Negocio 1","Pizzas"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Tipo Negocio 2","Cafés"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Tipo Negocio 3 ","Tacos "));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Tipo Negocio 1","Pizzas"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Tipo Negocio 2","Cafés"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Tipo Negocio 3 ","Tacos "));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Tipo Negocio 1","Pizzas"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Tipo Negocio 2","Cafés"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Tipo Negocio 3 ","Tacos "));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Tipo Negocio 1","Pizzas"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Tipo Negocio 2","Cafés"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Tipo Negocio 3 ","Tacos "));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Tipo Negocio 1","Pizzas"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Tipo Negocio 2","Cafés"));
+        listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Tipo Negocio 3 ","Tacos "));
         listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.background_inicio,"Tipo Negocio 1","Pizzas"));
         listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.semaforo,"Tipo Negocio 2","Cafés"));
         listaTipoNegocios.add( new EntidadTipoNegocio(R.drawable.fondo_noche,"Tipo Negocio 3 ","Tacos "));

@@ -15,7 +15,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:nestedScrollingEnabled="true"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -132,7 +134,38 @@
                 android:textColor="@android:color/white"
                 android:textSize="40sp" />
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/redes"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="40sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/redes"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="40sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/noredes"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="40sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/redes"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="40sp" />
         </LinearLayout>
 
 

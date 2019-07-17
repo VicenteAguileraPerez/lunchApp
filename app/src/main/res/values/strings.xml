@@ -11,6 +11,7 @@
     <string name="close">Close</string>
     <string name="compartir"> Compartir</string>
     <string name="comunicate">Comunícate</string>
+    <string name="descripcion_icono">Aquí se coloca el icono de la app.</string>
     <string name="descripcion_tipo_negocio_img">imagen del tipo de tienda</string>
     <string name="descripcion_negocio_img">imagen de la tienda</string>
     <string name="descripcion_logo_nombre_lunchapp">Aquí se coloca la imagen del logo o nombre de la App</string>
@@ -23,12 +24,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu">menu</string>
     <string name="quejassugerencias">Quejas y Sugerencias</string>
-    <string name="descripcion_icono">Aquí se coloca el icono de la app.</string>
     <string name="open">Open</string>
     <string name="opinion">opinión</string>
     <string name="pago">pago</string>
     <string name="problemas_tecnicos">Problemas técnicos</string>
     <string name="redes">redes</string>
+    <string name="noredes">noredes</string>
     <string name="soporteyayuda">soporte ayuda</string>
     <string name="soporte_y_contacto">Soporte y Contacto</string>
 </resources>

@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,11 +36,18 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setSupportActionBar((android.support.v7.widget.Toolbar) findViewById(R.id.toolbar_main_));
+       // Objects.requireNonNull(getSupportActionBar()).show();//oculta el toolbar
         mDrawerLayout = findViewById(R.id.navigation_drawer);
         listaItems = findViewById(R.id.navigation_items);
         listaItems.addHeaderView(cargarHeader());
         seleccionaItem(listaItems,items);
         setupDrawer();
+      //  mDrawerLayout.setScrimColor(getResources().getColor(R.color.colorThird) );
+        //mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.colorblanco));
+        //cambia el color de las 3 barritas del toggle
+        mDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorblanco));
+
         mDrawerToggle.syncState();//sincroniza el boton del toolbar con el navigation Drawer
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

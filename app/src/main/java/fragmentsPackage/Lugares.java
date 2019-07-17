@@ -88,6 +88,23 @@ public class Lugares extends Fragment {
         listaNegocios = new ArrayList<>();
         listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
         listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 41"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 54"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 1"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 2"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante1,"Lugar 1","Descripción lugar 41"));
+        listaNegocios.add( new EntidadNegocio(R.drawable.restaurante2,"Lugar 2","Descripción lugar 54"));
         return  listaNegocios;
     }
 
