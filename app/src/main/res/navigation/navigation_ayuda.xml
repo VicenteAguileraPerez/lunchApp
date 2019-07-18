@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_ayuda_to_quejasysugenencias2"
             app:destination="@id/quejasysugenencias2" />
+        <action
+            android:id="@+id/action_ayuda_to_informacionapp"
+            app:destination="@id/informacionapp" />
     </fragment>
 
     <fragment
@@ -28,5 +31,10 @@
         android:name="fragmentsPackage.quejasysugenencias"
         android:label="fragment_quejasysugenencias"
         tools:layout="@layout/fragment_quejasysugenencias" />
+    <fragment
+        android:id="@+id/informacionapp"
+        android:name="com.example.lunchapp.informacionapp"
+        android:label="fragment_informacionapp"
+        tools:layout="@layout/fragment_informacionapp" />
 
 </navigation>

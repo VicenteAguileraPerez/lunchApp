@@ -109,6 +109,44 @@ public class Ayuda extends Fragment {
 
             }
         });
+        boton = view.findViewById(R.id.btninfo);
+        boton.setClickable(true);
+        boton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Button botonAyuda = (Button) v;
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+
+                        botonAyuda.setTextColor(getResources().getColor(R.color.colorblanco));
+                        botonAyuda.setBackgroundColor(Color.parseColor("#FF6634"));
+                        botonAyuda.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_info_100_white, 0, 0, 0);
+
+                        //retorna falso para que se puedan recibir clicks, y para que si el boton se desliza y se suelta
+                        // , se active el clickListener
+
+                        return false;
+                    case MotionEvent.ACTION_UP:
+                        botonAyuda.setTextColor(getResources().getColor(R.color.colorPrimary));
+                        botonAyuda.setBackground(getResources().getDrawable(R.drawable.transparent_button_inactive));
+                        botonAyuda.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_info_100_orange, 0, 0, 0);
+
+                        return false;
+                }
+                return false;
+            }
+        });
+
+        /*
+         * The TouchListener is executed before the view can respond to the event. The ClickListener will receive its event only after the view has handled it.
+         * Vic
+         * */
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_ayuda_to_informacionapp);
+            }
+        });
 
 
 
