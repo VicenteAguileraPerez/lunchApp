@@ -79,10 +79,8 @@ dentro del drawer layout.
         android:dividerHeight="1dp"
         android:layout_width="260dp"
         android:layout_height="match_parent"
-        android:background="@color/colorgris"
+        android:background="@color/colorblanco"
         android:divider="@color/colorThird"
-
-
         />
 
 
