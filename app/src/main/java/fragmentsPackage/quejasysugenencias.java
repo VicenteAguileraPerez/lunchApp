@@ -14,12 +14,8 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+ import com.example.lunchapp.R;
 
-import com.example.lunchapp.MainActivity;
-import com.example.lunchapp.R;
-
-import org.w3c.dom.Text;
 
 
 /**
@@ -100,4 +96,20 @@ public class quejasysugenencias extends Fragment {
 
 
     }
+/*
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                InputMethodManager inputMethodManager =
+                        (InputMethodManager) getActivity() .getSystemService( Activity.INPUT_METHOD_SERVICE);
+                        inputMethodManager.hideSoftInputFromWindow( getActivity().getCurrentFocus().getWindowToken(), 0);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+*/
+
 }

@@ -9,7 +9,18 @@
     android:background="#FF0000"
 
     >
+<!-- Los scrollFlags, permiten modificar el comportamiento del toolbar,
+segun el scroll que se aplique al contenedor.
+Coordinator layout, es para "coordinar animaciones.
 
+Para tener la animación, el fragment (o list view u otro elemento),
+deben estar en un NestedScrollView layout (para tener su scroll padre independiente)
+,y a su vez en un CoordinatorLayout
+
+Pero como ya tenemos un MenuDrawer, no lo podemos modificar, así que anidamos todo lo anterior
+dentro del drawer layout.
+
+-->
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/coordinator_main"
         android:layout_width="match_parent"
@@ -33,6 +44,8 @@
 
         </android.support.design.widget.AppBarLayout>
 
+        <!-- fillViewport, permité visualizar completamente el Listview
+        que está ya contenido en algun contenedor de scroll-->
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -13,9 +13,6 @@
     android:paddingBottom="20dp">
 
 
-
-
-
         <EditText
             android:id="@+id/editText_correodecontacto"
             android:layout_width="match_parent"

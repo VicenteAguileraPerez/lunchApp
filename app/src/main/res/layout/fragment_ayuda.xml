@@ -3,11 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     tools:context="fragmentsNavigationAyuda.Ayuda">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/hello_blank_fragment"
-    android:textSize="40sp"
-    />
+
+    <!--TODO implementar opciones de ayuda, cada item es una opción, y al desplegar, sería la solución-->
+    <ExpandableListView
+        android:id="@+id/evl_opciones_ayuda"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"/>
 </LinearLayout>
