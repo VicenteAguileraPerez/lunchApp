@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_quejasysugenencias" />
     <fragment
         android:id="@+id/informacionapp"
-        android:name="com.example.lunchapp.informacionapp"
+        android:name="fragmentsPackage.informacionapp"
         android:label="fragment_informacionapp"
         tools:layout="@layout/fragment_informacionapp" />
 

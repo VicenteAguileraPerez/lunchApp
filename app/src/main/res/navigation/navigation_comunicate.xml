@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_comunicate"
+    app:startDestination="@id/informacionapp">
+    <fragment
+        android:id="@+id/informacionapp"
+        android:name="fragmentsPackage.informacionapp"
+        tools:layout="@layout/fragment_informacionapp"
+        android:label="fragment_informacionapp" />
+</navigation>

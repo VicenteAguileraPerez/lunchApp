@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity
 
     private boolean activarRetorno;
     private ListView listaItems;
-    private String[] items = {"Ayuda", "Quejas y sugerencias"};
+    private String[] items = {"Ayuda", "Quejas y sugerencias","Comunícate"};
     //CoordinatorLayout coordinatorLayout;
 
     private DrawerLayout mDrawerLayout;
@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity
                     break;
                 case "Quejas y sugerencias":
                     intent = new Intent(this,Main2Activity_quejassugerencias.class);
+                    break;
+                case "Comunícate":
+                    intent = new Intent(this,Main2Activity_comunicate.class);
+                    break;
             }
             startActivity(intent);
 
@@ -129,14 +133,7 @@ public class MainActivity extends AppCompatActivity
                     //getSupportActionBar().setTitle(mActivityTitle);
                     invalidateOptionsMenu();
                 }
-             /*
-                @Override
-                public void onDrawerSlide(View drawerView, float slideOffset) {
-                    super.onDrawerSlide(drawerView, slideOffset);
-                    float slideX = drawerView.getWidth() * slideOffset;
-                    coordinatorLayout.setTranslationX(slideX);
-                }
-                */
+
             };
 
             mDrawerToggle.setDrawerIndicatorEnabled(true);
