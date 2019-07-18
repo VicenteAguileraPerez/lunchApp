@@ -74,7 +74,7 @@ public class Ayuda extends Fragment {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_ayuda_to_quejasysugenencias2);
+                Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
             }
         });
 
@@ -105,7 +105,8 @@ public class Ayuda extends Fragment {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_ayuda_to_ayuda2);
+                Navigation.findNavController(v).navigate(R.id.action_ayuda_to_quejasysugenencias2);
+
             }
         });
 
