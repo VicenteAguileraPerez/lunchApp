@@ -43,15 +43,16 @@
             android:layout_weight="0.20"
             android:gravity="center"
             android:padding="5dp"
-            android:text="LUNCHAPPWO@GMAIL.COM"
+            android:text="@string/correo_app"
             android:textAlignment="center"
             android:textColor="#ff6634"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/imageViewequipo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:contentDescription="@string/imagen_grupo_de_personas"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -66,7 +67,7 @@
             android:layout_margin="10dp"
             android:layout_weight="0.20"
             android:gravity="center"
-            android:text="VICENTE AGUILERA PÉREZ"
+            android:text="@string/nombre_vicente"
             android:textAlignment="center"
             android:textColor="#ff6634"
             android:textSize="15sp" />
@@ -79,7 +80,8 @@
             android:layout_margin="10dp"
             android:layout_weight="0.20"
             android:gravity="center"
-            android:text="VICTOR PÉREZ ESPINO"
+            android:text="@string/nombre_vic"
+
             android:textAlignment="center"
             android:textColor="#ff6634"
             android:textSize="15sp" />
@@ -92,7 +94,7 @@
             android:layout_margin="10dp"
             android:layout_weight="0.20"
             android:gravity="center"
-            android:text="OMAR JALIL CASTILLO ZAMUDIO"
+            android:text="@string/nombre_jalil"
             android:textAlignment="center"
             android:textColor="#ff6634"
             android:textSize="15sp" />

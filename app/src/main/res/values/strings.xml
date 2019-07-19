@@ -11,6 +11,7 @@
     <string name="close">Close</string>
     <string name="compartir"> Compartir</string>
     <string name="comunicate">Comunícate</string>
+    <string name="correo_app">LUNCHAPPWO@GMAIL.COM</string>
     <string name="descripcion_icono">Aquí se coloca el icono de la app.</string>
     <string name="descripcion_tipo_negocio_img">imagen del tipo de tienda</string>
     <string name="descripcion_negocio_img">imagen de la tienda</string>
@@ -22,6 +23,7 @@
     <string name="email_usuario">Correo electrónico</string>
     <string name="escribe_tu_queja_sugerencia">Escribe tu queja o sugerencia</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagen_grupo_de_personas">Imagen que representa un grupo de personas.</>
     <string name="menu">menu</string>
     <string name="quejassugerencias">Quejas y Sugerencias</string>
     <string name="open">Open</string>
@@ -32,4 +34,7 @@
     <string name="noredes">noredes</string>
     <string name="soporteyayuda">soporte ayuda</string>
     <string name="soporte_y_contacto">Soporte y Contacto</string>
+    <string name="nombre_vic">VICTOR ALFONSO PÉREZ ESPINO</string>
+    <string name="nombre_vicente">VICENTE AGUILERA PÉREZ</string>
+    <string name="nombre_jalil">OMAR JALIL CASTILLO ZAMUDIO</string>
 </resources>

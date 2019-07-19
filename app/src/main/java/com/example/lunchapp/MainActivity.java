@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity
         listaItems.addHeaderView(cargarHeader());
         seleccionaItem(listaItems,items);
         setupDrawer();
-      //  mDrawerLayout.setScrimColor(getResources().getColor(R.color.colorThird) );
-          mDrawerLayout.setScrimColor(getResources().getColor(R.color.transparente) );
+
+//          mDrawerLayout.setScrimColor(getResources().getColor(R.color.transparente) );
 
 
         //mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.colorblanco));
