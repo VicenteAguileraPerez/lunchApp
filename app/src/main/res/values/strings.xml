@@ -4,6 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="abrir_navigation_menu">Abrir menú deslizante</string>
+    <string name="aceptar">Aceptar</string>
     <string name="ayuda">Ayuda</string>
     <string name="buscar_tipo_negocio">Buscar negocios</string>
     <string name="buscar_negocio">Buscar</string>
@@ -23,8 +24,11 @@
     <string name="email_usuario">Correo electrónico</string>
     <string name="escribe_tu_queja_sugerencia">Escribe tu queja o sugerencia</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="imagen_grupo_de_personas">Imagen que representa un grupo de personas.</>
+    <string name="imagen_grupo_de_personas">Imagen que representa un grupo de personas.</string>
     <string name="menu">menu</string>
+    <string name="error_carga_elementos">No carga elementos de cualquier pantalla?</string>
+    <string name="dialog_carga_elementos">Listas en blanco.</string>
+    <string name="dialog_carga_elementos_mensaje">Reinicie la app y compruebe su conexión a internet.</string>
     <string name="quejassugerencias">Quejas y Sugerencias</string>
     <string name="open">Open</string>
     <string name="opinion">opinión</string>
@@ -37,4 +41,6 @@
     <string name="nombre_vic">VICTOR ALFONSO PÉREZ ESPINO</string>
     <string name="nombre_vicente">VICENTE AGUILERA PÉREZ</string>
     <string name="nombre_jalil">OMAR JALIL CASTILLO ZAMUDIO</string>
+    <string name="titulo_ejemplo"> Titulo ejemplo</string>
+    <string name="mensaje_ejemplo">Soy un mensaje de ejemplo.</string>
 </resources>

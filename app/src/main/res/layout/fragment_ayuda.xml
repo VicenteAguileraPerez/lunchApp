@@ -4,14 +4,26 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="fragmentsNavigationAyuda.Ayuda">
+    tools:context="fragmentsNavigationAyuda.Ayuda"
+    android:padding="16dp"
+    >
 
-    <!--TODO implementar opciones de ayuda, cada item es una opción, y al desplegar, sería la solución-->
-    <ExpandableListView
-        android:id="@+id/evl_opciones_ayuda"
-        android:layout_height="match_parent"
+
+
+
+    <Button
+        android:id="@+id/btn_no_carga_elementos"
         android:layout_width="match_parent"
-        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="0.5dp"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_button_inactive"
+        android:text="@string/error_carga_elementos"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:layout_gravity="center"
+
+        />
+
+
 </LinearLayout>

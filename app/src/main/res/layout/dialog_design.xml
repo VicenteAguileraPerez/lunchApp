@@ -31,7 +31,6 @@
         android:layout_weight="9"
         android:textSize="18sp"
         android:text="@string/mensaje_ejemplo"
-
         />
 
     <Button
@@ -40,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/aceptar"
-        android:layout_gravity="right"
+        android:layout_gravity="end"
         android:background="@drawable/button_border_inactive"
         />
 
